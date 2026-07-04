@@ -1,0 +1,5019 @@
+{
+ "generated_at": "2026-07-04T13:21:48.913391+00:00",
+ "data_source": "snapshot",
+ "data_fetched_at": "2026-07-04T13:10:16.938020+00:00",
+ "reasoning_source": "template",
+ "teams": {
+  "MEX": {
+   "name_en": "Mexico",
+   "name_zh": "墨西哥",
+   "group": "A",
+   "fifa_rank": 14,
+   "elo": 1943,
+   "form_1y": 150
+  },
+  "RSA": {
+   "name_en": "South Africa",
+   "name_zh": "南非",
+   "group": "A",
+   "fifa_rank": 55,
+   "elo": 1559,
+   "form_1y": 0
+  },
+  "KOR": {
+   "name_en": "South Korea",
+   "name_zh": "韩国",
+   "group": "A",
+   "fifa_rank": 23,
+   "elo": 1723,
+   "form_1y": -17
+  },
+  "CZE": {
+   "name_en": "Czech Republic",
+   "name_zh": "捷克",
+   "group": "A",
+   "fifa_rank": 42,
+   "elo": 1680,
+   "form_1y": -52
+  },
+  "SUI": {
+   "name_en": "Switzerland",
+   "name_zh": "瑞士",
+   "group": "B",
+   "fifa_rank": 17,
+   "elo": 1943,
+   "form_1y": 46
+  },
+  "CAN": {
+   "name_en": "Canada",
+   "name_zh": "加拿大",
+   "group": "B",
+   "fifa_rank": 28,
+   "elo": 1764,
+   "form_1y": 24
+  },
+  "BIH": {
+   "name_en": "Bosnia and Herzegovina",
+   "name_zh": "波黑",
+   "group": "B",
+   "fifa_rank": 68,
+   "elo": 1605,
+   "form_1y": 129
+  },
+  "QAT": {
+   "name_en": "Qatar",
+   "name_zh": "卡塔尔",
+   "group": "B",
+   "fifa_rank": 51,
+   "elo": 1411,
+   "form_1y": -150
+  },
+  "BRA": {
+   "name_en": "Brazil",
+   "name_zh": "巴西",
+   "group": "C",
+   "fifa_rank": 5,
+   "elo": 2031,
+   "form_1y": 11
+  },
+  "MAR": {
+   "name_en": "Morocco",
+   "name_zh": "摩洛哥",
+   "group": "C",
+   "fifa_rank": 11,
+   "elo": 1886,
+   "form_1y": 113
+  },
+  "SCO": {
+   "name_en": "Scotland",
+   "name_zh": "苏格兰",
+   "group": "C",
+   "fifa_rank": 38,
+   "elo": 1745,
+   "form_1y": 11
+  },
+  "HAI": {
+   "name_en": "Haiti",
+   "name_zh": "海地",
+   "group": "C",
+   "fifa_rank": 84,
+   "elo": 1517,
+   "form_1y": 16
+  },
+  "USA": {
+   "name_en": "United States",
+   "name_zh": "美国",
+   "group": "D",
+   "fifa_rank": 15,
+   "elo": 1798,
+   "form_1y": 52
+  },
+  "AUS": {
+   "name_en": "Australia",
+   "name_zh": "澳大利亚",
+   "group": "D",
+   "fifa_rank": 26,
+   "elo": 1795,
+   "form_1y": 20
+  },
+  "PAR": {
+   "name_en": "Paraguay",
+   "name_zh": "巴拉圭",
+   "group": "D",
+   "fifa_rank": 39,
+   "elo": 1823,
+   "form_1y": 150
+  },
+  "TUR": {
+   "name_en": "Turkey",
+   "name_zh": "土耳其",
+   "group": "D",
+   "fifa_rank": 27,
+   "elo": 1852,
+   "form_1y": 33
+  },
+  "GER": {
+   "name_en": "Germany",
+   "name_zh": "德国",
+   "group": "E",
+   "fifa_rank": 9,
+   "elo": 1908,
+   "form_1y": -48
+  },
+  "CIV": {
+   "name_en": "Ivory Coast",
+   "name_zh": "科特迪瓦",
+   "group": "E",
+   "fifa_rank": 41,
+   "elo": 1727,
+   "form_1y": 104
+  },
+  "ECU": {
+   "name_en": "Ecuador",
+   "name_zh": "厄瓜多尔",
+   "group": "E",
+   "fifa_rank": 24,
+   "elo": 1871,
+   "form_1y": 1
+  },
+  "CUW": {
+   "name_en": "Curacao",
+   "name_zh": "库拉索",
+   "group": "E",
+   "fifa_rank": 82,
+   "elo": 1438,
+   "form_1y": 85
+  },
+  "NED": {
+   "name_en": "Netherlands",
+   "name_zh": "荷兰",
+   "group": "F",
+   "fifa_rank": 7,
+   "elo": 1971,
+   "form_1y": -4
+  },
+  "JPN": {
+   "name_en": "Japan",
+   "name_zh": "日本",
+   "group": "F",
+   "fifa_rank": 18,
+   "elo": 1888,
+   "form_1y": 31
+  },
+  "SWE": {
+   "name_en": "Sweden",
+   "name_zh": "瑞典",
+   "group": "F",
+   "fifa_rank": 43,
+   "elo": 1731,
+   "form_1y": 57
+  },
+  "TUN": {
+   "name_en": "Tunisia",
+   "name_zh": "突尼斯",
+   "group": "F",
+   "fifa_rank": 46,
+   "elo": 1562,
+   "form_1y": -109
+  },
+  "BEL": {
+   "name_en": "Belgium",
+   "name_zh": "比利时",
+   "group": "G",
+   "fifa_rank": 8,
+   "elo": 1910,
+   "form_1y": -24
+  },
+  "EGY": {
+   "name_en": "Egypt",
+   "name_zh": "埃及",
+   "group": "G",
+   "fifa_rank": 32,
+   "elo": 1747,
+   "form_1y": 114
+  },
+  "IRN": {
+   "name_en": "Iran",
+   "name_zh": "伊朗",
+   "group": "G",
+   "fifa_rank": 21,
+   "elo": 1764,
+   "form_1y": -44
+  },
+  "NZL": {
+   "name_en": "New Zealand",
+   "name_zh": "新西兰",
+   "group": "G",
+   "fifa_rank": 86,
+   "elo": 1534,
+   "form_1y": -36
+  },
+  "ESP": {
+   "name_en": "Spain",
+   "name_zh": "西班牙",
+   "group": "H",
+   "fifa_rank": 1,
+   "elo": 2159,
+   "form_1y": 70
+  },
+  "CPV": {
+   "name_en": "Cape Verde",
+   "name_zh": "佛得角",
+   "group": "H",
+   "fifa_rank": 70,
+   "elo": 1619,
+   "form_1y": 59
+  },
+  "URU": {
+   "name_en": "Uruguay",
+   "name_zh": "乌拉圭",
+   "group": "H",
+   "fifa_rank": 12,
+   "elo": 1841,
+   "form_1y": -150
+  },
+  "KSA": {
+   "name_en": "Saudi Arabia",
+   "name_zh": "沙特阿拉伯",
+   "group": "H",
+   "fifa_rank": 60,
+   "elo": 1596,
+   "form_1y": 8
+  },
+  "FRA": {
+   "name_en": "France",
+   "name_zh": "法国",
+   "group": "I",
+   "fifa_rank": 3,
+   "elo": 2134,
+   "form_1y": 57
+  },
+  "NOR": {
+   "name_en": "Norway",
+   "name_zh": "挪威",
+   "group": "I",
+   "fifa_rank": 29,
+   "elo": 1934,
+   "form_1y": 150
+  },
+  "SEN": {
+   "name_en": "Senegal",
+   "name_zh": "塞内加尔",
+   "group": "I",
+   "fifa_rank": 19,
+   "elo": 1816,
+   "form_1y": 49
+  },
+  "IRQ": {
+   "name_en": "Iraq",
+   "name_zh": "伊拉克",
+   "group": "I",
+   "fifa_rank": 58,
+   "elo": 1561,
+   "form_1y": -102
+  },
+  "ARG": {
+   "name_en": "Argentina",
+   "name_zh": "阿根廷",
+   "group": "J",
+   "fifa_rank": 2,
+   "elo": 2151,
+   "form_1y": 8
+  },
+  "AUT": {
+   "name_en": "Austria",
+   "name_zh": "奥地利",
+   "group": "J",
+   "fifa_rank": 22,
+   "elo": 1821,
+   "form_1y": -55
+  },
+  "ALG": {
+   "name_en": "Algeria",
+   "name_zh": "阿尔及利亚",
+   "group": "J",
+   "fifa_rank": 35,
+   "elo": 1756,
+   "form_1y": 115
+  },
+  "JOR": {
+   "name_en": "Jordan",
+   "name_zh": "约旦",
+   "group": "J",
+   "fifa_rank": 64,
+   "elo": 1628,
+   "form_1y": -7
+  },
+  "COL": {
+   "name_en": "Colombia",
+   "name_zh": "哥伦比亚",
+   "group": "K",
+   "fifa_rank": 13,
+   "elo": 2009,
+   "form_1y": -20
+  },
+  "POR": {
+   "name_en": "Portugal",
+   "name_zh": "葡萄牙",
+   "group": "K",
+   "fifa_rank": 6,
+   "elo": 2013,
+   "form_1y": 63
+  },
+  "COD": {
+   "name_en": "DR Congo",
+   "name_zh": "民主刚果",
+   "group": "K",
+   "fifa_rank": 56,
+   "elo": 1704,
+   "form_1y": 150
+  },
+  "UZB": {
+   "name_en": "Uzbekistan",
+   "name_zh": "乌兹别克斯坦",
+   "group": "K",
+   "fifa_rank": 54,
+   "elo": 1631,
+   "form_1y": -50
+  },
+  "ENG": {
+   "name_en": "England",
+   "name_zh": "英格兰",
+   "group": "L",
+   "fifa_rank": 4,
+   "elo": 2046,
+   "form_1y": 70
+  },
+  "CRO": {
+   "name_en": "Croatia",
+   "name_zh": "克罗地亚",
+   "group": "L",
+   "fifa_rank": 10,
+   "elo": 1882,
+   "form_1y": -33
+  },
+  "GHA": {
+   "name_en": "Ghana",
+   "name_zh": "加纳",
+   "group": "L",
+   "fifa_rank": 73,
+   "elo": 1570,
+   "form_1y": 32
+  },
+  "PAN": {
+   "name_en": "Panama",
+   "name_zh": "巴拿马",
+   "group": "L",
+   "fifa_rank": 33,
+   "elo": 1658,
+   "form_1y": -88
+  }
+ },
+ "ratings": {
+  "MEX": {
+   "elo": 1943,
+   "fifa_rank": 14,
+   "fifa_bonus": 72,
+   "form_1y": 150,
+   "wc_played": 4,
+   "wc_gd": 8,
+   "wc_performance": 60.0,
+   "strength_pre": 2039.6,
+   "strength": 2099.6
+  },
+  "RSA": {
+   "elo": 1559,
+   "fifa_rank": 55,
+   "fifa_bonus": 0.0,
+   "form_1y": 0,
+   "wc_played": 4,
+   "wc_gd": -2,
+   "wc_performance": -15.0,
+   "strength_pre": 1559.0,
+   "strength": 1544.0
+  },
+  "KOR": {
+   "elo": 1723,
+   "fifa_rank": 23,
+   "fifa_bonus": 54,
+   "form_1y": -17,
+   "wc_played": 3,
+   "wc_gd": -1,
+   "wc_performance": -10.0,
+   "strength_pre": 1730.7,
+   "strength": 1720.7
+  },
+  "CZE": {
+   "elo": 1680,
+   "fifa_rank": 42,
+   "fifa_bonus": 16,
+   "form_1y": -52,
+   "wc_played": 3,
+   "wc_gd": -4,
+   "wc_performance": -40.0,
+   "strength_pre": 1658.8,
+   "strength": 1618.8
+  },
+  "SUI": {
+   "elo": 1943,
+   "fifa_rank": 17,
+   "fifa_bonus": 66,
+   "form_1y": 46,
+   "wc_played": 4,
+   "wc_gd": 6,
+   "wc_performance": 45.0,
+   "strength_pre": 1985.8,
+   "strength": 2030.8
+  },
+  "CAN": {
+   "elo": 1764,
+   "fifa_rank": 28,
+   "fifa_bonus": 44,
+   "form_1y": 24,
+   "wc_played": 4,
+   "wc_gd": 6,
+   "wc_performance": 45.0,
+   "strength_pre": 1789.2,
+   "strength": 1834.2
+  },
+  "BIH": {
+   "elo": 1605,
+   "fifa_rank": 68,
+   "fifa_bonus": 0.0,
+   "form_1y": 129,
+   "wc_played": 4,
+   "wc_gd": -3,
+   "wc_performance": -22.5,
+   "strength_pre": 1669.5,
+   "strength": 1647.0
+  },
+  "QAT": {
+   "elo": 1411,
+   "fifa_rank": 51,
+   "fifa_bonus": 0.0,
+   "form_1y": -150,
+   "wc_played": 3,
+   "wc_gd": -8,
+   "wc_performance": -80.0,
+   "strength_pre": 1336.0,
+   "strength": 1256.0
+  },
+  "BRA": {
+   "elo": 2031,
+   "fifa_rank": 5,
+   "fifa_bonus": 90,
+   "form_1y": 11,
+   "wc_played": 4,
+   "wc_gd": 7,
+   "wc_performance": 52.5,
+   "strength_pre": 2063.5,
+   "strength": 2116.0
+  },
+  "MAR": {
+   "elo": 1886,
+   "fifa_rank": 11,
+   "fifa_bonus": 78,
+   "form_1y": 113,
+   "wc_played": 4,
+   "wc_gd": 3,
+   "wc_performance": 22.5,
+   "strength_pre": 1965.9,
+   "strength": 1988.4
+  },
+  "SCO": {
+   "elo": 1745,
+   "fifa_rank": 38,
+   "fifa_bonus": 24,
+   "form_1y": 11,
+   "wc_played": 3,
+   "wc_gd": -3,
+   "wc_performance": -30.0,
+   "strength_pre": 1757.7,
+   "strength": 1727.7
+  },
+  "HAI": {
+   "elo": 1517,
+   "fifa_rank": 84,
+   "fifa_bonus": 0.0,
+   "form_1y": 16,
+   "wc_played": 3,
+   "wc_gd": -6,
+   "wc_performance": -60.0,
+   "strength_pre": 1525.0,
+   "strength": 1465.0
+  },
+  "USA": {
+   "elo": 1798,
+   "fifa_rank": 15,
+   "fifa_bonus": 70,
+   "form_1y": 52,
+   "wc_played": 4,
+   "wc_gd": 6,
+   "wc_performance": 45.0,
+   "strength_pre": 1845.0,
+   "strength": 1890.0
+  },
+  "AUS": {
+   "elo": 1795,
+   "fifa_rank": 26,
+   "fifa_bonus": 48,
+   "form_1y": 20,
+   "wc_played": 4,
+   "wc_gd": 0,
+   "wc_performance": 0.0,
+   "strength_pre": 1819.4,
+   "strength": 1819.4
+  },
+  "PAR": {
+   "elo": 1823,
+   "fifa_rank": 39,
+   "fifa_bonus": 22,
+   "form_1y": 150,
+   "wc_played": 4,
+   "wc_gd": -2,
+   "wc_performance": -15.0,
+   "strength_pre": 1904.6,
+   "strength": 1889.6
+  },
+  "TUR": {
+   "elo": 1852,
+   "fifa_rank": 27,
+   "fifa_bonus": 46,
+   "form_1y": 33,
+   "wc_played": 3,
+   "wc_gd": -2,
+   "wc_performance": -20.0,
+   "strength_pre": 1882.3,
+   "strength": 1862.3
+  },
+  "GER": {
+   "elo": 1908,
+   "fifa_rank": 9,
+   "fifa_bonus": 82,
+   "form_1y": -48,
+   "wc_played": 4,
+   "wc_gd": 6,
+   "wc_performance": 45.0,
+   "strength_pre": 1908.6,
+   "strength": 1953.6
+  },
+  "CIV": {
+   "elo": 1727,
+   "fifa_rank": 41,
+   "fifa_bonus": 18,
+   "form_1y": 104,
+   "wc_played": 4,
+   "wc_gd": 1,
+   "wc_performance": 7.5,
+   "strength_pre": 1784.4,
+   "strength": 1791.9
+  },
+  "ECU": {
+   "elo": 1871,
+   "fifa_rank": 24,
+   "fifa_bonus": 52,
+   "form_1y": 1,
+   "wc_played": 4,
+   "wc_gd": -2,
+   "wc_performance": -15.0,
+   "strength_pre": 1887.1,
+   "strength": 1872.1
+  },
+  "CUW": {
+   "elo": 1438,
+   "fifa_rank": 82,
+   "fifa_bonus": 0.0,
+   "form_1y": 85,
+   "wc_played": 3,
+   "wc_gd": -8,
+   "wc_performance": -80.0,
+   "strength_pre": 1480.5,
+   "strength": 1400.5
+  },
+  "NED": {
+   "elo": 1971,
+   "fifa_rank": 7,
+   "fifa_bonus": 86,
+   "form_1y": -4,
+   "wc_played": 4,
+   "wc_gd": 6,
+   "wc_performance": 45.0,
+   "strength_pre": 1994.8,
+   "strength": 2039.8
+  },
+  "JPN": {
+   "elo": 1888,
+   "fifa_rank": 18,
+   "fifa_bonus": 64,
+   "form_1y": 31,
+   "wc_played": 4,
+   "wc_gd": 3,
+   "wc_performance": 22.5,
+   "strength_pre": 1922.7,
+   "strength": 1945.2
+  },
+  "SWE": {
+   "elo": 1731,
+   "fifa_rank": 43,
+   "fifa_bonus": 14,
+   "form_1y": 57,
+   "wc_played": 4,
+   "wc_gd": -3,
+   "wc_performance": -22.5,
+   "strength_pre": 1763.7,
+   "strength": 1741.2
+  },
+  "TUN": {
+   "elo": 1562,
+   "fifa_rank": 46,
+   "fifa_bonus": 8,
+   "form_1y": -109,
+   "wc_played": 3,
+   "wc_gd": -10,
+   "wc_performance": -100.0,
+   "strength_pre": 1509.9,
+   "strength": 1409.9
+  },
+  "BEL": {
+   "elo": 1910,
+   "fifa_rank": 8,
+   "fifa_bonus": 84,
+   "form_1y": -24,
+   "wc_played": 4,
+   "wc_gd": 5,
+   "wc_performance": 37.5,
+   "strength_pre": 1923.2,
+   "strength": 1960.7
+  },
+  "EGY": {
+   "elo": 1747,
+   "fifa_rank": 32,
+   "fifa_bonus": 36,
+   "form_1y": 114,
+   "wc_played": 4,
+   "wc_gd": 2,
+   "wc_performance": 15.0,
+   "strength_pre": 1814.8,
+   "strength": 1829.8
+  },
+  "IRN": {
+   "elo": 1764,
+   "fifa_rank": 21,
+   "fifa_bonus": 58,
+   "form_1y": -44,
+   "wc_played": 3,
+   "wc_gd": 0,
+   "wc_performance": 0.0,
+   "strength_pre": 1759.4,
+   "strength": 1759.4
+  },
+  "NZL": {
+   "elo": 1534,
+   "fifa_rank": 86,
+   "fifa_bonus": 0.0,
+   "form_1y": -36,
+   "wc_played": 3,
+   "wc_gd": -6,
+   "wc_performance": -60.0,
+   "strength_pre": 1516.0,
+   "strength": 1456.0
+  },
+  "ESP": {
+   "elo": 2159,
+   "fifa_rank": 1,
+   "fifa_bonus": 98,
+   "form_1y": 70,
+   "wc_played": 4,
+   "wc_gd": 8,
+   "wc_performance": 60.0,
+   "strength_pre": 2223.4,
+   "strength": 2283.4
+  },
+  "CPV": {
+   "elo": 1619,
+   "fifa_rank": 70,
+   "fifa_bonus": 0.0,
+   "form_1y": 59,
+   "wc_played": 4,
+   "wc_gd": -1,
+   "wc_performance": -7.5,
+   "strength_pre": 1648.5,
+   "strength": 1641.0
+  },
+  "URU": {
+   "elo": 1841,
+   "fifa_rank": 12,
+   "fifa_bonus": 76,
+   "form_1y": -150,
+   "wc_played": 3,
+   "wc_gd": -1,
+   "wc_performance": -10.0,
+   "strength_pre": 1788.8,
+   "strength": 1778.8
+  },
+  "KSA": {
+   "elo": 1596,
+   "fifa_rank": 60,
+   "fifa_bonus": 0.0,
+   "form_1y": 8,
+   "wc_played": 3,
+   "wc_gd": -4,
+   "wc_performance": -40.0,
+   "strength_pre": 1600.0,
+   "strength": 1560.0
+  },
+  "FRA": {
+   "elo": 2134,
+   "fifa_rank": 3,
+   "fifa_bonus": 94,
+   "form_1y": 57,
+   "wc_played": 4,
+   "wc_gd": 11,
+   "wc_performance": 82.5,
+   "strength_pre": 2190.7,
+   "strength": 2273.2
+  },
+  "NOR": {
+   "elo": 1934,
+   "fifa_rank": 29,
+   "fifa_bonus": 42,
+   "form_1y": 150,
+   "wc_played": 4,
+   "wc_gd": 2,
+   "wc_performance": 15.0,
+   "strength_pre": 2021.6,
+   "strength": 2036.6
+  },
+  "SEN": {
+   "elo": 1816,
+   "fifa_rank": 19,
+   "fifa_bonus": 62,
+   "form_1y": 49,
+   "wc_played": 4,
+   "wc_gd": 1,
+   "wc_performance": 7.5,
+   "strength_pre": 1859.1,
+   "strength": 1866.6
+  },
+  "IRQ": {
+   "elo": 1561,
+   "fifa_rank": 58,
+   "fifa_bonus": 0.0,
+   "form_1y": -102,
+   "wc_played": 3,
+   "wc_gd": -11,
+   "wc_performance": -100.0,
+   "strength_pre": 1510.0,
+   "strength": 1410.0
+  },
+  "ARG": {
+   "elo": 2151,
+   "fifa_rank": 2,
+   "fifa_bonus": 96,
+   "form_1y": 8,
+   "wc_played": 4,
+   "wc_gd": 8,
+   "wc_performance": 60.0,
+   "strength_pre": 2183.8,
+   "strength": 2243.8
+  },
+  "AUT": {
+   "elo": 1821,
+   "fifa_rank": 22,
+   "fifa_bonus": 56,
+   "form_1y": -55,
+   "wc_played": 4,
+   "wc_gd": -3,
+   "wc_performance": -22.5,
+   "strength_pre": 1810.3,
+   "strength": 1787.8
+  },
+  "ALG": {
+   "elo": 1756,
+   "fifa_rank": 35,
+   "fifa_bonus": 30,
+   "form_1y": 115,
+   "wc_played": 4,
+   "wc_gd": -4,
+   "wc_performance": -30.0,
+   "strength_pre": 1822.5,
+   "strength": 1792.5
+  },
+  "JOR": {
+   "elo": 1628,
+   "fifa_rank": 64,
+   "fifa_bonus": 0.0,
+   "form_1y": -7,
+   "wc_played": 3,
+   "wc_gd": -5,
+   "wc_performance": -50.0,
+   "strength_pre": 1624.5,
+   "strength": 1574.5
+  },
+  "COL": {
+   "elo": 2009,
+   "fifa_rank": 13,
+   "fifa_bonus": 74,
+   "form_1y": -20,
+   "wc_played": 4,
+   "wc_gd": 4,
+   "wc_performance": 30.0,
+   "strength_pre": 2021.2,
+   "strength": 2051.2
+  },
+  "POR": {
+   "elo": 2013,
+   "fifa_rank": 6,
+   "fifa_bonus": 88,
+   "form_1y": 63,
+   "wc_played": 4,
+   "wc_gd": 6,
+   "wc_performance": 45.0,
+   "strength_pre": 2070.9,
+   "strength": 2115.9
+  },
+  "COD": {
+   "elo": 1704,
+   "fifa_rank": 56,
+   "fifa_bonus": 0.0,
+   "form_1y": 150,
+   "wc_played": 4,
+   "wc_gd": 0,
+   "wc_performance": 0.0,
+   "strength_pre": 1779.0,
+   "strength": 1779.0
+  },
+  "UZB": {
+   "elo": 1631,
+   "fifa_rank": 54,
+   "fifa_bonus": 0.0,
+   "form_1y": -50,
+   "wc_played": 3,
+   "wc_gd": -9,
+   "wc_performance": -90.0,
+   "strength_pre": 1606.0,
+   "strength": 1516.0
+  },
+  "ENG": {
+   "elo": 2046,
+   "fifa_rank": 4,
+   "fifa_bonus": 92,
+   "form_1y": 70,
+   "wc_played": 4,
+   "wc_gd": 5,
+   "wc_performance": 37.5,
+   "strength_pre": 2108.6,
+   "strength": 2146.1
+  },
+  "CRO": {
+   "elo": 1882,
+   "fifa_rank": 10,
+   "fifa_bonus": 80,
+   "form_1y": -33,
+   "wc_played": 4,
+   "wc_gd": -1,
+   "wc_performance": -7.5,
+   "strength_pre": 1889.5,
+   "strength": 1882.0
+  },
+  "GHA": {
+   "elo": 1570,
+   "fifa_rank": 73,
+   "fifa_bonus": 0.0,
+   "form_1y": 32,
+   "wc_played": 4,
+   "wc_gd": -1,
+   "wc_performance": -7.5,
+   "strength_pre": 1586.0,
+   "strength": 1578.5
+  },
+  "PAN": {
+   "elo": 1658,
+   "fifa_rank": 33,
+   "fifa_bonus": 34,
+   "form_1y": -88,
+   "wc_played": 3,
+   "wc_gd": -4,
+   "wc_performance": -40.0,
+   "strength_pre": 1624.2,
+   "strength": 1584.2
+  }
+ },
+ "groups": {
+  "A": [
+   {
+    "code": "MEX",
+    "pos": 1,
+    "played": 3,
+    "won": 3,
+    "drawn": 0,
+    "lost": 0,
+    "gf": 6,
+    "ga": 0,
+    "gd": 6,
+    "points": 9
+   },
+   {
+    "code": "RSA",
+    "pos": 2,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 2,
+    "ga": 3,
+    "gd": -1,
+    "points": 4
+   },
+   {
+    "code": "KOR",
+    "pos": 3,
+    "played": 3,
+    "won": 1,
+    "drawn": 0,
+    "lost": 2,
+    "gf": 2,
+    "ga": 3,
+    "gd": -1,
+    "points": 3
+   },
+   {
+    "code": "CZE",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 1,
+    "lost": 2,
+    "gf": 2,
+    "ga": 6,
+    "gd": -4,
+    "points": 1
+   }
+  ],
+  "B": [
+   {
+    "code": "SUI",
+    "pos": 1,
+    "played": 3,
+    "won": 2,
+    "drawn": 1,
+    "lost": 0,
+    "gf": 7,
+    "ga": 3,
+    "gd": 4,
+    "points": 7
+   },
+   {
+    "code": "CAN",
+    "pos": 2,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 8,
+    "ga": 3,
+    "gd": 5,
+    "points": 4
+   },
+   {
+    "code": "BIH",
+    "pos": 3,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 5,
+    "ga": 6,
+    "gd": -1,
+    "points": 4
+   },
+   {
+    "code": "QAT",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 1,
+    "lost": 2,
+    "gf": 2,
+    "ga": 10,
+    "gd": -8,
+    "points": 1
+   }
+  ],
+  "C": [
+   {
+    "code": "BRA",
+    "pos": 1,
+    "played": 3,
+    "won": 2,
+    "drawn": 1,
+    "lost": 0,
+    "gf": 7,
+    "ga": 1,
+    "gd": 6,
+    "points": 7
+   },
+   {
+    "code": "MAR",
+    "pos": 2,
+    "played": 3,
+    "won": 2,
+    "drawn": 1,
+    "lost": 0,
+    "gf": 6,
+    "ga": 3,
+    "gd": 3,
+    "points": 7
+   },
+   {
+    "code": "SCO",
+    "pos": 3,
+    "played": 3,
+    "won": 1,
+    "drawn": 0,
+    "lost": 2,
+    "gf": 1,
+    "ga": 4,
+    "gd": -3,
+    "points": 3
+   },
+   {
+    "code": "HAI",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 0,
+    "lost": 3,
+    "gf": 2,
+    "ga": 8,
+    "gd": -6,
+    "points": 0
+   }
+  ],
+  "D": [
+   {
+    "code": "USA",
+    "pos": 1,
+    "played": 3,
+    "won": 2,
+    "drawn": 0,
+    "lost": 1,
+    "gf": 8,
+    "ga": 4,
+    "gd": 4,
+    "points": 6
+   },
+   {
+    "code": "AUS",
+    "pos": 2,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 2,
+    "ga": 2,
+    "gd": 0,
+    "points": 4
+   },
+   {
+    "code": "PAR",
+    "pos": 3,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 2,
+    "ga": 4,
+    "gd": -2,
+    "points": 4
+   },
+   {
+    "code": "TUR",
+    "pos": 4,
+    "played": 3,
+    "won": 1,
+    "drawn": 0,
+    "lost": 2,
+    "gf": 3,
+    "ga": 5,
+    "gd": -2,
+    "points": 3
+   }
+  ],
+  "E": [
+   {
+    "code": "GER",
+    "pos": 1,
+    "played": 3,
+    "won": 2,
+    "drawn": 0,
+    "lost": 1,
+    "gf": 10,
+    "ga": 4,
+    "gd": 6,
+    "points": 6
+   },
+   {
+    "code": "CIV",
+    "pos": 2,
+    "played": 3,
+    "won": 2,
+    "drawn": 0,
+    "lost": 1,
+    "gf": 4,
+    "ga": 2,
+    "gd": 2,
+    "points": 6
+   },
+   {
+    "code": "ECU",
+    "pos": 3,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 2,
+    "ga": 2,
+    "gd": 0,
+    "points": 4
+   },
+   {
+    "code": "CUW",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 1,
+    "lost": 2,
+    "gf": 1,
+    "ga": 9,
+    "gd": -8,
+    "points": 1
+   }
+  ],
+  "F": [
+   {
+    "code": "NED",
+    "pos": 1,
+    "played": 3,
+    "won": 2,
+    "drawn": 1,
+    "lost": 0,
+    "gf": 10,
+    "ga": 4,
+    "gd": 6,
+    "points": 7
+   },
+   {
+    "code": "JPN",
+    "pos": 2,
+    "played": 3,
+    "won": 1,
+    "drawn": 2,
+    "lost": 0,
+    "gf": 7,
+    "ga": 3,
+    "gd": 4,
+    "points": 5
+   },
+   {
+    "code": "SWE",
+    "pos": 3,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 7,
+    "ga": 7,
+    "gd": 0,
+    "points": 4
+   },
+   {
+    "code": "TUN",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 0,
+    "lost": 3,
+    "gf": 2,
+    "ga": 12,
+    "gd": -10,
+    "points": 0
+   }
+  ],
+  "G": [
+   {
+    "code": "BEL",
+    "pos": 1,
+    "played": 3,
+    "won": 1,
+    "drawn": 2,
+    "lost": 0,
+    "gf": 6,
+    "ga": 2,
+    "gd": 4,
+    "points": 5
+   },
+   {
+    "code": "EGY",
+    "pos": 2,
+    "played": 3,
+    "won": 1,
+    "drawn": 2,
+    "lost": 0,
+    "gf": 5,
+    "ga": 3,
+    "gd": 2,
+    "points": 5
+   },
+   {
+    "code": "IRN",
+    "pos": 3,
+    "played": 3,
+    "won": 0,
+    "drawn": 3,
+    "lost": 0,
+    "gf": 3,
+    "ga": 3,
+    "gd": 0,
+    "points": 3
+   },
+   {
+    "code": "NZL",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 1,
+    "lost": 2,
+    "gf": 4,
+    "ga": 10,
+    "gd": -6,
+    "points": 1
+   }
+  ],
+  "H": [
+   {
+    "code": "ESP",
+    "pos": 1,
+    "played": 3,
+    "won": 2,
+    "drawn": 1,
+    "lost": 0,
+    "gf": 5,
+    "ga": 0,
+    "gd": 5,
+    "points": 7
+   },
+   {
+    "code": "CPV",
+    "pos": 2,
+    "played": 3,
+    "won": 0,
+    "drawn": 3,
+    "lost": 0,
+    "gf": 2,
+    "ga": 2,
+    "gd": 0,
+    "points": 3
+   },
+   {
+    "code": "URU",
+    "pos": 3,
+    "played": 3,
+    "won": 0,
+    "drawn": 2,
+    "lost": 1,
+    "gf": 3,
+    "ga": 4,
+    "gd": -1,
+    "points": 2
+   },
+   {
+    "code": "KSA",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 2,
+    "lost": 1,
+    "gf": 1,
+    "ga": 5,
+    "gd": -4,
+    "points": 2
+   }
+  ],
+  "I": [
+   {
+    "code": "FRA",
+    "pos": 1,
+    "played": 3,
+    "won": 3,
+    "drawn": 0,
+    "lost": 0,
+    "gf": 10,
+    "ga": 2,
+    "gd": 8,
+    "points": 9
+   },
+   {
+    "code": "NOR",
+    "pos": 2,
+    "played": 3,
+    "won": 2,
+    "drawn": 0,
+    "lost": 1,
+    "gf": 8,
+    "ga": 7,
+    "gd": 1,
+    "points": 6
+   },
+   {
+    "code": "SEN",
+    "pos": 3,
+    "played": 3,
+    "won": 1,
+    "drawn": 0,
+    "lost": 2,
+    "gf": 8,
+    "ga": 6,
+    "gd": 2,
+    "points": 3
+   },
+   {
+    "code": "IRQ",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 0,
+    "lost": 3,
+    "gf": 1,
+    "ga": 12,
+    "gd": -11,
+    "points": 0
+   }
+  ],
+  "J": [
+   {
+    "code": "ARG",
+    "pos": 1,
+    "played": 3,
+    "won": 3,
+    "drawn": 0,
+    "lost": 0,
+    "gf": 8,
+    "ga": 1,
+    "gd": 7,
+    "points": 9
+   },
+   {
+    "code": "AUT",
+    "pos": 2,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 6,
+    "ga": 6,
+    "gd": 0,
+    "points": 4
+   },
+   {
+    "code": "ALG",
+    "pos": 3,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 5,
+    "ga": 7,
+    "gd": -2,
+    "points": 4
+   },
+   {
+    "code": "JOR",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 0,
+    "lost": 3,
+    "gf": 3,
+    "ga": 8,
+    "gd": -5,
+    "points": 0
+   }
+  ],
+  "K": [
+   {
+    "code": "COL",
+    "pos": 1,
+    "played": 3,
+    "won": 2,
+    "drawn": 1,
+    "lost": 0,
+    "gf": 4,
+    "ga": 1,
+    "gd": 3,
+    "points": 7
+   },
+   {
+    "code": "POR",
+    "pos": 2,
+    "played": 3,
+    "won": 1,
+    "drawn": 2,
+    "lost": 0,
+    "gf": 6,
+    "ga": 1,
+    "gd": 5,
+    "points": 5
+   },
+   {
+    "code": "COD",
+    "pos": 3,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 4,
+    "ga": 3,
+    "gd": 1,
+    "points": 4
+   },
+   {
+    "code": "UZB",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 0,
+    "lost": 3,
+    "gf": 2,
+    "ga": 11,
+    "gd": -9,
+    "points": 0
+   }
+  ],
+  "L": [
+   {
+    "code": "ENG",
+    "pos": 1,
+    "played": 3,
+    "won": 2,
+    "drawn": 1,
+    "lost": 0,
+    "gf": 6,
+    "ga": 2,
+    "gd": 4,
+    "points": 7
+   },
+   {
+    "code": "CRO",
+    "pos": 2,
+    "played": 3,
+    "won": 2,
+    "drawn": 0,
+    "lost": 1,
+    "gf": 5,
+    "ga": 5,
+    "gd": 0,
+    "points": 6
+   },
+   {
+    "code": "GHA",
+    "pos": 3,
+    "played": 3,
+    "won": 1,
+    "drawn": 1,
+    "lost": 1,
+    "gf": 2,
+    "ga": 2,
+    "gd": 0,
+    "points": 4
+   },
+   {
+    "code": "PAN",
+    "pos": 4,
+    "played": 3,
+    "won": 0,
+    "drawn": 0,
+    "lost": 3,
+    "gf": 0,
+    "ga": 4,
+    "gd": -4,
+    "points": 0
+   }
+  ]
+ },
+ "group_matches": [
+  {
+   "home": "MEX",
+   "away": "RSA",
+   "score": [
+    2,
+    0
+   ],
+   "status": "finished",
+   "id": "gA1",
+   "round": "group",
+   "group": "A"
+  },
+  {
+   "home": "KOR",
+   "away": "CZE",
+   "score": [
+    2,
+    1
+   ],
+   "status": "finished",
+   "id": "gA2",
+   "round": "group",
+   "group": "A"
+  },
+  {
+   "home": "CZE",
+   "away": "RSA",
+   "score": [
+    1,
+    1
+   ],
+   "status": "finished",
+   "id": "gA3",
+   "round": "group",
+   "group": "A"
+  },
+  {
+   "home": "MEX",
+   "away": "KOR",
+   "score": [
+    1,
+    0
+   ],
+   "status": "finished",
+   "id": "gA4",
+   "round": "group",
+   "group": "A"
+  },
+  {
+   "home": "CZE",
+   "away": "MEX",
+   "score": [
+    0,
+    3
+   ],
+   "status": "finished",
+   "id": "gA5",
+   "round": "group",
+   "group": "A"
+  },
+  {
+   "home": "RSA",
+   "away": "KOR",
+   "score": [
+    1,
+    0
+   ],
+   "status": "finished",
+   "id": "gA6",
+   "round": "group",
+   "group": "A"
+  },
+  {
+   "home": "CAN",
+   "away": "BIH",
+   "score": [
+    1,
+    1
+   ],
+   "status": "finished",
+   "id": "gB1",
+   "round": "group",
+   "group": "B"
+  },
+  {
+   "home": "QAT",
+   "away": "SUI",
+   "score": [
+    1,
+    1
+   ],
+   "status": "finished",
+   "id": "gB2",
+   "round": "group",
+   "group": "B"
+  },
+  {
+   "home": "SUI",
+   "away": "BIH",
+   "score": [
+    4,
+    1
+   ],
+   "status": "finished",
+   "id": "gB3",
+   "round": "group",
+   "group": "B"
+  },
+  {
+   "home": "CAN",
+   "away": "QAT",
+   "score": [
+    6,
+    0
+   ],
+   "status": "finished",
+   "id": "gB4",
+   "round": "group",
+   "group": "B"
+  },
+  {
+   "home": "SUI",
+   "away": "CAN",
+   "score": [
+    2,
+    1
+   ],
+   "status": "finished",
+   "id": "gB5",
+   "round": "group",
+   "group": "B"
+  },
+  {
+   "home": "BIH",
+   "away": "QAT",
+   "score": [
+    3,
+    1
+   ],
+   "status": "finished",
+   "id": "gB6",
+   "round": "group",
+   "group": "B"
+  },
+  {
+   "home": "BRA",
+   "away": "MAR",
+   "score": [
+    1,
+    1
+   ],
+   "status": "finished",
+   "id": "gC1",
+   "round": "group",
+   "group": "C"
+  },
+  {
+   "home": "HAI",
+   "away": "SCO",
+   "score": [
+    0,
+    1
+   ],
+   "status": "finished",
+   "id": "gC2",
+   "round": "group",
+   "group": "C"
+  },
+  {
+   "home": "SCO",
+   "away": "MAR",
+   "score": [
+    0,
+    1
+   ],
+   "status": "finished",
+   "id": "gC3",
+   "round": "group",
+   "group": "C"
+  },
+  {
+   "home": "BRA",
+   "away": "HAI",
+   "score": [
+    3,
+    0
+   ],
+   "status": "finished",
+   "id": "gC4",
+   "round": "group",
+   "group": "C"
+  },
+  {
+   "home": "SCO",
+   "away": "BRA",
+   "score": [
+    0,
+    3
+   ],
+   "status": "finished",
+   "id": "gC5",
+   "round": "group",
+   "group": "C"
+  },
+  {
+   "home": "MAR",
+   "away": "HAI",
+   "score": [
+    4,
+    2
+   ],
+   "status": "finished",
+   "id": "gC6",
+   "round": "group",
+   "group": "C"
+  },
+  {
+   "home": "USA",
+   "away": "PAR",
+   "score": [
+    4,
+    1
+   ],
+   "status": "finished",
+   "id": "gD1",
+   "round": "group",
+   "group": "D"
+  },
+  {
+   "home": "AUS",
+   "away": "TUR",
+   "score": [
+    2,
+    0
+   ],
+   "status": "finished",
+   "id": "gD2",
+   "round": "group",
+   "group": "D"
+  },
+  {
+   "home": "USA",
+   "away": "AUS",
+   "score": [
+    2,
+    0
+   ],
+   "status": "finished",
+   "id": "gD3",
+   "round": "group",
+   "group": "D"
+  },
+  {
+   "home": "TUR",
+   "away": "PAR",
+   "score": [
+    0,
+    1
+   ],
+   "status": "finished",
+   "id": "gD4",
+   "round": "group",
+   "group": "D"
+  },
+  {
+   "home": "TUR",
+   "away": "USA",
+   "score": [
+    3,
+    2
+   ],
+   "status": "finished",
+   "id": "gD5",
+   "round": "group",
+   "group": "D"
+  },
+  {
+   "home": "PAR",
+   "away": "AUS",
+   "score": [
+    0,
+    0
+   ],
+   "status": "finished",
+   "id": "gD6",
+   "round": "group",
+   "group": "D"
+  },
+  {
+   "home": "GER",
+   "away": "CUW",
+   "score": [
+    7,
+    1
+   ],
+   "status": "finished",
+   "id": "gE1",
+   "round": "group",
+   "group": "E"
+  },
+  {
+   "home": "CIV",
+   "away": "ECU",
+   "score": [
+    1,
+    0
+   ],
+   "status": "finished",
+   "id": "gE2",
+   "round": "group",
+   "group": "E"
+  },
+  {
+   "home": "GER",
+   "away": "CIV",
+   "score": [
+    2,
+    1
+   ],
+   "status": "finished",
+   "id": "gE3",
+   "round": "group",
+   "group": "E"
+  },
+  {
+   "home": "ECU",
+   "away": "CUW",
+   "score": [
+    0,
+    0
+   ],
+   "status": "finished",
+   "id": "gE4",
+   "round": "group",
+   "group": "E"
+  },
+  {
+   "home": "CUW",
+   "away": "CIV",
+   "score": [
+    0,
+    2
+   ],
+   "status": "finished",
+   "id": "gE5",
+   "round": "group",
+   "group": "E"
+  },
+  {
+   "home": "ECU",
+   "away": "GER",
+   "score": [
+    2,
+    1
+   ],
+   "status": "finished",
+   "id": "gE6",
+   "round": "group",
+   "group": "E"
+  },
+  {
+   "home": "NED",
+   "away": "JPN",
+   "score": [
+    2,
+    2
+   ],
+   "status": "finished",
+   "id": "gF1",
+   "round": "group",
+   "group": "F"
+  },
+  {
+   "home": "SWE",
+   "away": "TUN",
+   "score": [
+    5,
+    1
+   ],
+   "status": "finished",
+   "id": "gF2",
+   "round": "group",
+   "group": "F"
+  },
+  {
+   "home": "NED",
+   "away": "SWE",
+   "score": [
+    5,
+    1
+   ],
+   "status": "finished",
+   "id": "gF3",
+   "round": "group",
+   "group": "F"
+  },
+  {
+   "home": "TUN",
+   "away": "JPN",
+   "score": [
+    0,
+    4
+   ],
+   "status": "finished",
+   "id": "gF4",
+   "round": "group",
+   "group": "F"
+  },
+  {
+   "home": "JPN",
+   "away": "SWE",
+   "score": [
+    1,
+    1
+   ],
+   "status": "finished",
+   "id": "gF5",
+   "round": "group",
+   "group": "F"
+  },
+  {
+   "home": "TUN",
+   "away": "NED",
+   "score": [
+    1,
+    3
+   ],
+   "status": "finished",
+   "id": "gF6",
+   "round": "group",
+   "group": "F"
+  },
+  {
+   "home": "BEL",
+   "away": "EGY",
+   "score": [
+    1,
+    1
+   ],
+   "status": "finished",
+   "id": "gG1",
+   "round": "group",
+   "group": "G"
+  },
+  {
+   "home": "IRN",
+   "away": "NZL",
+   "score": [
+    2,
+    2
+   ],
+   "status": "finished",
+   "id": "gG2",
+   "round": "group",
+   "group": "G"
+  },
+  {
+   "home": "BEL",
+   "away": "IRN",
+   "score": [
+    0,
+    0
+   ],
+   "status": "finished",
+   "id": "gG3",
+   "round": "group",
+   "group": "G"
+  },
+  {
+   "home": "NZL",
+   "away": "EGY",
+   "score": [
+    1,
+    3
+   ],
+   "status": "finished",
+   "id": "gG4",
+   "round": "group",
+   "group": "G"
+  },
+  {
+   "home": "EGY",
+   "away": "IRN",
+   "score": [
+    1,
+    1
+   ],
+   "status": "finished",
+   "id": "gG5",
+   "round": "group",
+   "group": "G"
+  },
+  {
+   "home": "NZL",
+   "away": "BEL",
+   "score": [
+    1,
+    5
+   ],
+   "status": "finished",
+   "id": "gG6",
+   "round": "group",
+   "group": "G"
+  },
+  {
+   "home": "ESP",
+   "away": "CPV",
+   "score": [
+    0,
+    0
+   ],
+   "status": "finished",
+   "id": "gH1",
+   "round": "group",
+   "group": "H"
+  },
+  {
+   "home": "KSA",
+   "away": "URU",
+   "score": [
+    1,
+    1
+   ],
+   "status": "finished",
+   "id": "gH2",
+   "round": "group",
+   "group": "H"
+  },
+  {
+   "home": "ESP",
+   "away": "KSA",
+   "score": [
+    4,
+    0
+   ],
+   "status": "finished",
+   "id": "gH3",
+   "round": "group",
+   "group": "H"
+  },
+  {
+   "home": "URU",
+   "away": "CPV",
+   "score": [
+    2,
+    2
+   ],
+   "status": "finished",
+   "id": "gH4",
+   "round": "group",
+   "group": "H"
+  },
+  {
+   "home": "CPV",
+   "away": "KSA",
+   "score": [
+    0,
+    0
+   ],
+   "status": "finished",
+   "id": "gH5",
+   "round": "group",
+   "group": "H"
+  },
+  {
+   "home": "URU",
+   "away": "ESP",
+   "score": [
+    0,
+    1
+   ],
+   "status": "finished",
+   "id": "gH6",
+   "round": "group",
+   "group": "H"
+  },
+  {
+   "home": "FRA",
+   "away": "SEN",
+   "score": [
+    3,
+    1
+   ],
+   "status": "finished",
+   "id": "gI1",
+   "round": "group",
+   "group": "I"
+  },
+  {
+   "home": "IRQ",
+   "away": "NOR",
+   "score": [
+    1,
+    4
+   ],
+   "status": "finished",
+   "id": "gI2",
+   "round": "group",
+   "group": "I"
+  },
+  {
+   "home": "FRA",
+   "away": "IRQ",
+   "score": [
+    3,
+    0
+   ],
+   "status": "finished",
+   "id": "gI3",
+   "round": "group",
+   "group": "I"
+  },
+  {
+   "home": "NOR",
+   "away": "SEN",
+   "score": [
+    3,
+    2
+   ],
+   "status": "finished",
+   "id": "gI4",
+   "round": "group",
+   "group": "I"
+  },
+  {
+   "home": "NOR",
+   "away": "FRA",
+   "score": [
+    1,
+    4
+   ],
+   "status": "finished",
+   "id": "gI5",
+   "round": "group",
+   "group": "I"
+  },
+  {
+   "home": "SEN",
+   "away": "IRQ",
+   "score": [
+    5,
+    0
+   ],
+   "status": "finished",
+   "id": "gI6",
+   "round": "group",
+   "group": "I"
+  },
+  {
+   "home": "ARG",
+   "away": "ALG",
+   "score": [
+    3,
+    0
+   ],
+   "status": "finished",
+   "id": "gJ1",
+   "round": "group",
+   "group": "J"
+  },
+  {
+   "home": "AUT",
+   "away": "JOR",
+   "score": [
+    3,
+    1
+   ],
+   "status": "finished",
+   "id": "gJ2",
+   "round": "group",
+   "group": "J"
+  },
+  {
+   "home": "ARG",
+   "away": "AUT",
+   "score": [
+    2,
+    0
+   ],
+   "status": "finished",
+   "id": "gJ3",
+   "round": "group",
+   "group": "J"
+  },
+  {
+   "home": "JOR",
+   "away": "ALG",
+   "score": [
+    1,
+    2
+   ],
+   "status": "finished",
+   "id": "gJ4",
+   "round": "group",
+   "group": "J"
+  },
+  {
+   "home": "ALG",
+   "away": "AUT",
+   "score": [
+    3,
+    3
+   ],
+   "status": "finished",
+   "id": "gJ5",
+   "round": "group",
+   "group": "J"
+  },
+  {
+   "home": "JOR",
+   "away": "ARG",
+   "score": [
+    1,
+    3
+   ],
+   "status": "finished",
+   "id": "gJ6",
+   "round": "group",
+   "group": "J"
+  },
+  {
+   "home": "POR",
+   "away": "COD",
+   "score": [
+    1,
+    1
+   ],
+   "status": "finished",
+   "id": "gK1",
+   "round": "group",
+   "group": "K"
+  },
+  {
+   "home": "UZB",
+   "away": "COL",
+   "score": [
+    1,
+    3
+   ],
+   "status": "finished",
+   "id": "gK2",
+   "round": "group",
+   "group": "K"
+  },
+  {
+   "home": "POR",
+   "away": "UZB",
+   "score": [
+    5,
+    0
+   ],
+   "status": "finished",
+   "id": "gK3",
+   "round": "group",
+   "group": "K"
+  },
+  {
+   "home": "COL",
+   "away": "COD",
+   "score": [
+    1,
+    0
+   ],
+   "status": "finished",
+   "id": "gK4",
+   "round": "group",
+   "group": "K"
+  },
+  {
+   "home": "COL",
+   "away": "POR",
+   "score": [
+    0,
+    0
+   ],
+   "status": "finished",
+   "id": "gK5",
+   "round": "group",
+   "group": "K"
+  },
+  {
+   "home": "COD",
+   "away": "UZB",
+   "score": [
+    3,
+    1
+   ],
+   "status": "finished",
+   "id": "gK6",
+   "round": "group",
+   "group": "K"
+  },
+  {
+   "home": "ENG",
+   "away": "CRO",
+   "score": [
+    4,
+    2
+   ],
+   "status": "finished",
+   "id": "gL1",
+   "round": "group",
+   "group": "L"
+  },
+  {
+   "home": "GHA",
+   "away": "PAN",
+   "score": [
+    1,
+    0
+   ],
+   "status": "finished",
+   "id": "gL2",
+   "round": "group",
+   "group": "L"
+  },
+  {
+   "home": "ENG",
+   "away": "GHA",
+   "score": [
+    0,
+    0
+   ],
+   "status": "finished",
+   "id": "gL3",
+   "round": "group",
+   "group": "L"
+  },
+  {
+   "home": "PAN",
+   "away": "CRO",
+   "score": [
+    0,
+    1
+   ],
+   "status": "finished",
+   "id": "gL4",
+   "round": "group",
+   "group": "L"
+  },
+  {
+   "home": "PAN",
+   "away": "ENG",
+   "score": [
+    0,
+    2
+   ],
+   "status": "finished",
+   "id": "gL5",
+   "round": "group",
+   "group": "L"
+  },
+  {
+   "home": "CRO",
+   "away": "GHA",
+   "score": [
+    2,
+    1
+   ],
+   "status": "finished",
+   "id": "gL6",
+   "round": "group",
+   "group": "L"
+  }
+ ],
+ "bracket": {
+  "round_of_32": [
+   {
+    "id": "m73",
+    "slot": 1,
+    "home": "GER",
+    "away": "PAR",
+    "date": "June 29",
+    "venue": "Foxborough",
+    "status": "finished",
+    "score": [
+     1,
+     1
+    ],
+    "aet": false,
+    "pens": [
+     3,
+     4
+    ],
+    "winner": "PAR"
+   },
+   {
+    "id": "m74",
+    "slot": 2,
+    "home": "FRA",
+    "away": "SWE",
+    "date": "June 30",
+    "venue": "East Rutherford",
+    "status": "finished",
+    "score": [
+     3,
+     0
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "FRA"
+   },
+   {
+    "id": "m75",
+    "slot": 3,
+    "home": "RSA",
+    "away": "CAN",
+    "date": "June 28",
+    "venue": "Inglewood",
+    "status": "finished",
+    "score": [
+     0,
+     1
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "CAN"
+   },
+   {
+    "id": "m76",
+    "slot": 4,
+    "home": "NED",
+    "away": "MAR",
+    "date": "June 29",
+    "venue": "Guadalupe",
+    "status": "finished",
+    "score": [
+     1,
+     1
+    ],
+    "aet": false,
+    "pens": [
+     2,
+     3
+    ],
+    "winner": "MAR"
+   },
+   {
+    "id": "m77",
+    "slot": 5,
+    "home": "POR",
+    "away": "CRO",
+    "date": "July 2",
+    "venue": "Toronto",
+    "status": "finished",
+    "score": [
+     2,
+     1
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "POR"
+   },
+   {
+    "id": "m78",
+    "slot": 6,
+    "home": "ESP",
+    "away": "AUT",
+    "date": "July 2",
+    "venue": "Inglewood",
+    "status": "finished",
+    "score": [
+     3,
+     0
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "ESP"
+   },
+   {
+    "id": "m79",
+    "slot": 7,
+    "home": "USA",
+    "away": "BIH",
+    "date": "July 1",
+    "venue": "Santa Clara",
+    "status": "finished",
+    "score": [
+     2,
+     0
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "USA"
+   },
+   {
+    "id": "m80",
+    "slot": 8,
+    "home": "BEL",
+    "away": "SEN",
+    "date": "July 1",
+    "venue": "Seattle",
+    "status": "finished",
+    "score": [
+     3,
+     2
+    ],
+    "aet": true,
+    "pens": null,
+    "winner": "BEL"
+   },
+   {
+    "id": "m81",
+    "slot": 9,
+    "home": "BRA",
+    "away": "JPN",
+    "date": "June 29",
+    "venue": "Houston",
+    "status": "finished",
+    "score": [
+     2,
+     1
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "BRA"
+   },
+   {
+    "id": "m82",
+    "slot": 10,
+    "home": "CIV",
+    "away": "NOR",
+    "date": "June 30",
+    "venue": "Arlington",
+    "status": "finished",
+    "score": [
+     1,
+     2
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "NOR"
+   },
+   {
+    "id": "m83",
+    "slot": 11,
+    "home": "MEX",
+    "away": "ECU",
+    "date": "June 30",
+    "venue": "Mexico City",
+    "status": "finished",
+    "score": [
+     2,
+     0
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "MEX"
+   },
+   {
+    "id": "m84",
+    "slot": 12,
+    "home": "ENG",
+    "away": "COD",
+    "date": "July 1",
+    "venue": "Atlanta",
+    "status": "finished",
+    "score": [
+     2,
+     1
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "ENG"
+   },
+   {
+    "id": "m85",
+    "slot": 13,
+    "home": "ARG",
+    "away": "CPV",
+    "date": "July 3",
+    "venue": "Miami Gardens",
+    "status": "finished",
+    "score": [
+     3,
+     2
+    ],
+    "aet": true,
+    "pens": null,
+    "winner": "ARG"
+   },
+   {
+    "id": "m86",
+    "slot": 14,
+    "home": "AUS",
+    "away": "EGY",
+    "date": "July 3",
+    "venue": "Arlington",
+    "status": "finished",
+    "score": [
+     1,
+     1
+    ],
+    "aet": false,
+    "pens": [
+     2,
+     4
+    ],
+    "winner": "EGY"
+   },
+   {
+    "id": "m87",
+    "slot": 15,
+    "home": "SUI",
+    "away": "ALG",
+    "date": "July 2",
+    "venue": "Vancouver",
+    "status": "finished",
+    "score": [
+     2,
+     0
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "SUI"
+   },
+   {
+    "id": "m88",
+    "slot": 16,
+    "home": "COL",
+    "away": "GHA",
+    "date": "July 3",
+    "venue": "Kansas City",
+    "status": "finished",
+    "score": [
+     1,
+     0
+    ],
+    "aet": false,
+    "pens": null,
+    "winner": "COL"
+   }
+  ],
+  "round_of_16": [
+   {
+    "id": "m89",
+    "slot": 1,
+    "home": "PAR",
+    "away": "FRA",
+    "date": "July 4",
+    "venue": "Philadelphia",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m73",
+     "m74"
+    ],
+    "prediction": {
+     "expected_goals": [
+      0.34,
+      2.22
+     ],
+     "p_win": 0.0438,
+     "p_draw": 0.1472,
+     "p_loss": 0.8089,
+     "most_likely_score": [
+      0,
+      2
+     ],
+     "most_likely_score_p": 0.1903,
+     "score_matrix": [
+      [
+       0.07697,
+       0.17118,
+       0.19035,
+       0.1411,
+       0.07845,
+       0.03489,
+       0.01293,
+       0.00411,
+       0.0015
+      ],
+      [
+       0.0262,
+       0.05827,
+       0.06479,
+       0.04803,
+       0.0267,
+       0.01188,
+       0.0044,
+       0.0014,
+       0.00051
+      ],
+      [
+       0.00446,
+       0.00992,
+       0.01103,
+       0.00817,
+       0.00454,
+       0.00202,
+       0.00075,
+       0.00024,
+       9e-05
+      ],
+      [
+       0.00051,
+       0.00113,
+       0.00125,
+       0.00093,
+       0.00052,
+       0.00023,
+       9e-05,
+       3e-05,
+       1e-05
+      ],
+      [
+       4e-05,
+       0.0001,
+       0.00011,
+       8e-05,
+       4e-05,
+       2e-05,
+       1e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       1e-05,
+       1e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.0938
+    },
+    "predicted_winner": "FRA",
+    "predicted_score": [
+     0,
+     2
+    ],
+    "reasoning": {
+     "text": "综合实力分法国高出巴拉圭 384分（明显占优）。实力差主要来自Elo基础分（1823 vs 2134）与本届状态（净胜球-2 vs +11）。泊松模型给出最可能比分0比2，法国晋级概率约91%。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m90",
+    "slot": 2,
+    "home": "CAN",
+    "away": "MAR",
+    "date": "July 4",
+    "venue": "Houston",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m75",
+     "m76"
+    ],
+    "prediction": {
+     "expected_goals": [
+      0.85,
+      1.81
+     ],
+     "p_win": 0.1726,
+     "p_draw": 0.2265,
+     "p_loss": 0.6009,
+     "most_likely_score": [
+      0,
+      1
+     ],
+     "most_likely_score_p": 0.1261,
+     "score_matrix": [
+      [
+       0.06958,
+       0.12614,
+       0.11433,
+       0.06909,
+       0.03131,
+       0.01135,
+       0.00343,
+       0.00089,
+       0.00025
+      ],
+      [
+       0.05932,
+       0.10753,
+       0.09746,
+       0.05889,
+       0.02669,
+       0.00968,
+       0.00292,
+       0.00076,
+       0.00021
+      ],
+      [
+       0.02528,
+       0.04583,
+       0.04154,
+       0.0251,
+       0.01138,
+       0.00412,
+       0.00125,
+       0.00032,
+       9e-05
+      ],
+      [
+       0.00718,
+       0.01302,
+       0.0118,
+       0.00713,
+       0.00323,
+       0.00117,
+       0.00035,
+       9e-05,
+       3e-05
+      ],
+      [
+       0.00153,
+       0.00278,
+       0.00252,
+       0.00152,
+       0.00069,
+       0.00025,
+       8e-05,
+       2e-05,
+       1e-05
+      ],
+      [
+       0.00026,
+       0.00047,
+       0.00043,
+       0.00026,
+       0.00012,
+       4e-05,
+       1e-05,
+       0.0,
+       0.0
+      ],
+      [
+       4e-05,
+       7e-05,
+       6e-05,
+       4e-05,
+       2e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       1e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.267
+    },
+    "predicted_winner": "MAR",
+    "predicted_score": [
+     0,
+     1
+    ],
+    "reasoning": {
+     "text": "综合实力分摩洛哥高出加拿大 154分（明显占优）。实力差主要来自Elo基础分（1764 vs 1886）与本届状态（净胜球+6 vs +3）。泊松模型给出最可能比分0比1，摩洛哥晋级概率约73%。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m93",
+    "slot": 3,
+    "home": "POR",
+    "away": "ESP",
+    "date": "July 6",
+    "venue": "Arlington",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m77",
+     "m78"
+    ],
+    "prediction": {
+     "expected_goals": [
+      0.81,
+      1.85
+     ],
+     "p_win": 0.16,
+     "p_draw": 0.2217,
+     "p_loss": 0.6183,
+     "most_likely_score": [
+      0,
+      1
+     ],
+     "most_likely_score_p": 0.1291,
+     "score_matrix": [
+      [
+       0.06993,
+       0.12914,
+       0.11923,
+       0.07339,
+       0.03388,
+       0.01251,
+       0.00385,
+       0.00102,
+       0.00029
+      ],
+      [
+       0.0569,
+       0.10507,
+       0.09701,
+       0.05971,
+       0.02757,
+       0.01018,
+       0.00313,
+       0.00083,
+       0.00024
+      ],
+      [
+       0.02315,
+       0.04274,
+       0.03947,
+       0.02429,
+       0.01121,
+       0.00414,
+       0.00127,
+       0.00034,
+       0.0001
+      ],
+      [
+       0.00628,
+       0.01159,
+       0.0107,
+       0.00659,
+       0.00304,
+       0.00112,
+       0.00035,
+       9e-05,
+       3e-05
+      ],
+      [
+       0.00128,
+       0.00236,
+       0.00218,
+       0.00134,
+       0.00062,
+       0.00023,
+       7e-05,
+       2e-05,
+       1e-05
+      ],
+      [
+       0.00021,
+       0.00038,
+       0.00035,
+       0.00022,
+       0.0001,
+       4e-05,
+       1e-05,
+       0.0,
+       0.0
+      ],
+      [
+       3e-05,
+       5e-05,
+       5e-05,
+       3e-05,
+       1e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       1e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.251
+    },
+    "predicted_winner": "ESP",
+    "predicted_score": [
+     0,
+     1
+    ],
+    "reasoning": {
+     "text": "综合实力分西班牙高出葡萄牙 168分（明显占优）。实力差主要来自Elo基础分（2013 vs 2159）与本届状态（净胜球+6 vs +8）。泊松模型给出最可能比分0比1，西班牙晋级概率约75%。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m94",
+    "slot": 4,
+    "home": "USA",
+    "away": "BEL",
+    "date": "July 6",
+    "venue": "Seattle",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m79",
+     "m80"
+    ],
+    "prediction": {
+     "expected_goals": [
+      1.11,
+      1.57
+     ],
+     "p_win": 0.2692,
+     "p_draw": 0.2509,
+     "p_loss": 0.48,
+     "most_likely_score": [
+      1,
+      1
+     ],
+     "most_likely_score_p": 0.1192,
+     "score_matrix": [
+      [
+       0.06793,
+       0.10699,
+       0.08425,
+       0.04423,
+       0.01741,
+       0.00549,
+       0.00144,
+       0.00032,
+       8e-05
+      ],
+      [
+       0.0757,
+       0.11922,
+       0.09388,
+       0.04928,
+       0.0194,
+       0.00611,
+       0.0016,
+       0.00036,
+       9e-05
+      ],
+      [
+       0.04218,
+       0.06643,
+       0.05231,
+       0.02746,
+       0.01081,
+       0.00341,
+       0.00089,
+       0.0002,
+       5e-05
+      ],
+      [
+       0.01567,
+       0.02467,
+       0.01943,
+       0.0102,
+       0.00402,
+       0.00126,
+       0.00033,
+       7e-05,
+       2e-05
+      ],
+      [
+       0.00436,
+       0.00687,
+       0.00541,
+       0.00284,
+       0.00112,
+       0.00035,
+       9e-05,
+       2e-05,
+       0.0
+      ],
+      [
+       0.00097,
+       0.00153,
+       0.00121,
+       0.00063,
+       0.00025,
+       8e-05,
+       2e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.00018,
+       0.00028,
+       0.00022,
+       0.00012,
+       5e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       3e-05,
+       5e-05,
+       4e-05,
+       2e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       1e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.3845,
+     "decided_in_extra": true
+    },
+    "predicted_winner": "BEL",
+    "predicted_score": [
+     1,
+     1
+    ],
+    "reasoning": {
+     "text": "综合实力分比利时高出美国 71分（略占上风）。实力差主要来自Elo基础分（1798 vs 1910）与本届状态（净胜球+6 vs +5）。泊松模型给出最可能比分1比1，比利时晋级概率约62%。常规时间大概率难分胜负，预计需要加时或点球分出晋级方。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m91",
+    "slot": 5,
+    "home": "BRA",
+    "away": "NOR",
+    "date": "July 5",
+    "venue": "East Rutherford",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m81",
+     "m82"
+    ],
+    "prediction": {
+     "expected_goals": [
+      1.6,
+      1.09
+     ],
+     "p_win": 0.4933,
+     "p_draw": 0.249,
+     "p_loss": 0.2578,
+     "most_likely_score": [
+      1,
+      1
+     ],
+     "most_likely_score_p": 0.1184,
+     "score_matrix": [
+      [
+       0.06805,
+       0.0739,
+       0.04013,
+       0.01453,
+       0.00394,
+       0.00086,
+       0.00016,
+       2e-05,
+       0.0
+      ],
+      [
+       0.10899,
+       0.11835,
+       0.06426,
+       0.02326,
+       0.00632,
+       0.00137,
+       0.00025,
+       4e-05,
+       1e-05
+      ],
+      [
+       0.08727,
+       0.09477,
+       0.05146,
+       0.01863,
+       0.00506,
+       0.0011,
+       0.0002,
+       3e-05,
+       0.0
+      ],
+      [
+       0.04659,
+       0.0506,
+       0.02747,
+       0.00994,
+       0.0027,
+       0.00059,
+       0.00011,
+       2e-05,
+       0.0
+      ],
+      [
+       0.01865,
+       0.02026,
+       0.011,
+       0.00398,
+       0.00108,
+       0.00023,
+       4e-05,
+       1e-05,
+       0.0
+      ],
+      [
+       0.00598,
+       0.00649,
+       0.00352,
+       0.00128,
+       0.00035,
+       8e-05,
+       1e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.00159,
+       0.00173,
+       0.00094,
+       0.00034,
+       9e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00036,
+       0.0004,
+       0.00022,
+       8e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       9e-05,
+       0.0001,
+       5e-05,
+       2e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.6289,
+     "decided_in_extra": true
+    },
+    "predicted_winner": "BRA",
+    "predicted_score": [
+     1,
+     1
+    ],
+    "reasoning": {
+     "text": "综合实力分巴西高出挪威 79分（略占上风）。实力差主要来自Elo基础分（2031 vs 1934）与本届状态（净胜球+7 vs +2）。泊松模型给出最可能比分1比1，巴西晋级概率约63%。常规时间大概率难分胜负，预计需要加时或点球分出晋级方。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m92",
+    "slot": 6,
+    "home": "MEX",
+    "away": "ENG",
+    "date": "July 5",
+    "venue": "Mexico City",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m83",
+     "m84"
+    ],
+    "prediction": {
+     "expected_goals": [
+      1.19,
+      1.5
+     ],
+     "p_win": 0.3024,
+     "p_draw": 0.2551,
+     "p_loss": 0.4426,
+     "most_likely_score": [
+      1,
+      1
+     ],
+     "most_likely_score_p": 0.1211,
+     "score_matrix": [
+      [
+       0.06766,
+       0.10144,
+       0.07603,
+       0.038,
+       0.01424,
+       0.00427,
+       0.00107,
+       0.00023,
+       5e-05
+      ],
+      [
+       0.0808,
+       0.12112,
+       0.09079,
+       0.04537,
+       0.017,
+       0.0051,
+       0.00127,
+       0.00027,
+       6e-05
+      ],
+      [
+       0.04824,
+       0.07231,
+       0.0542,
+       0.02709,
+       0.01015,
+       0.00304,
+       0.00076,
+       0.00016,
+       4e-05
+      ],
+      [
+       0.0192,
+       0.02878,
+       0.02157,
+       0.01078,
+       0.00404,
+       0.00121,
+       0.0003,
+       6e-05,
+       1e-05
+      ],
+      [
+       0.00573,
+       0.00859,
+       0.00644,
+       0.00322,
+       0.00121,
+       0.00036,
+       9e-05,
+       2e-05,
+       0.0
+      ],
+      [
+       0.00137,
+       0.00205,
+       0.00154,
+       0.00077,
+       0.00029,
+       9e-05,
+       2e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.00027,
+       0.00041,
+       0.00031,
+       0.00015,
+       6e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       5e-05,
+       7e-05,
+       5e-05,
+       3e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       1e-05,
+       1e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.4231,
+     "decided_in_extra": true
+    },
+    "predicted_winner": "ENG",
+    "predicted_score": [
+     1,
+     1
+    ],
+    "reasoning": {
+     "text": "综合实力分英格兰高出墨西哥 46分（势均力敌）。实力差主要来自Elo基础分（1943 vs 2046）与本届状态（净胜球+8 vs +5）。泊松模型给出最可能比分1比1，英格兰晋级概率约58%。常规时间大概率难分胜负，预计需要加时或点球分出晋级方。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m95",
+    "slot": 7,
+    "home": "ARG",
+    "away": "EGY",
+    "date": "July 7",
+    "venue": "Atlanta",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m85",
+     "m86"
+    ],
+    "prediction": {
+     "expected_goals": [
+      2.25,
+      0.3
+     ],
+     "p_win": 0.8238,
+     "p_draw": 0.1396,
+     "p_loss": 0.0366,
+     "most_likely_score": [
+      2,
+      0
+     ],
+     "most_likely_score_p": 0.1981,
+     "score_matrix": [
+      [
+       0.07794,
+       0.02318,
+       0.00345,
+       0.00034,
+       3e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.17572,
+       0.05225,
+       0.00777,
+       0.00077,
+       6e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.19807,
+       0.0589,
+       0.00876,
+       0.00087,
+       6e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.14884,
+       0.04426,
+       0.00658,
+       0.00065,
+       5e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.08389,
+       0.02494,
+       0.00371,
+       0.00037,
+       3e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.03782,
+       0.01125,
+       0.00167,
+       0.00017,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.01421,
+       0.00423,
+       0.00063,
+       6e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00458,
+       0.00136,
+       0.0002,
+       2e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0017,
+       0.00051,
+       8e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.9168
+    },
+    "predicted_winner": "ARG",
+    "predicted_score": [
+     2,
+     0
+    ],
+    "reasoning": {
+     "text": "综合实力分阿根廷高出埃及 414分（明显占优）。实力差主要来自Elo基础分（2151 vs 1747）与本届状态（净胜球+8 vs +2）。泊松模型给出最可能比分2比0，阿根廷晋级概率约92%。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m96",
+    "slot": 8,
+    "home": "SUI",
+    "away": "COL",
+    "date": "July 7",
+    "venue": "Vancouver",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m87",
+     "m88"
+    ],
+    "prediction": {
+     "expected_goals": [
+      1.28,
+      1.42
+     ],
+     "p_win": 0.3402,
+     "p_draw": 0.2577,
+     "p_loss": 0.4021,
+     "most_likely_score": [
+      1,
+      1
+     ],
+     "most_likely_score_p": 0.1223,
+     "score_matrix": [
+      [
+       0.0675,
+       0.09551,
+       0.06758,
+       0.03187,
+       0.01128,
+       0.00319,
+       0.00075,
+       0.00015,
+       3e-05
+      ],
+      [
+       0.08644,
+       0.12231,
+       0.08654,
+       0.04082,
+       0.01444,
+       0.00409,
+       0.00096,
+       0.00019,
+       4e-05
+      ],
+      [
+       0.05535,
+       0.07832,
+       0.05541,
+       0.02614,
+       0.00925,
+       0.00262,
+       0.00062,
+       0.00012,
+       3e-05
+      ],
+      [
+       0.02363,
+       0.03343,
+       0.02365,
+       0.01116,
+       0.00395,
+       0.00112,
+       0.00026,
+       5e-05,
+       1e-05
+      ],
+      [
+       0.00756,
+       0.0107,
+       0.00757,
+       0.00357,
+       0.00126,
+       0.00036,
+       8e-05,
+       2e-05,
+       0.0
+      ],
+      [
+       0.00194,
+       0.00274,
+       0.00194,
+       0.00091,
+       0.00032,
+       9e-05,
+       2e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.00041,
+       0.00059,
+       0.00041,
+       0.0002,
+       7e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       8e-05,
+       0.00011,
+       8e-05,
+       4e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       1e-05,
+       2e-05,
+       1e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.466,
+     "decided_in_extra": true
+    },
+    "predicted_winner": "COL",
+    "predicted_score": [
+     1,
+     1
+    ],
+    "reasoning": {
+     "text": "综合实力分哥伦比亚高出瑞士 20分（势均力敌）。实力差主要来自Elo基础分（1943 vs 2009）与本届状态（净胜球+6 vs +4）。泊松模型给出最可能比分1比1，哥伦比亚晋级概率约53%。常规时间大概率难分胜负，预计需要加时或点球分出晋级方。",
+     "source": "template"
+    }
+   }
+  ],
+  "quarter_finals": [
+   {
+    "id": "m97",
+    "slot": 1,
+    "home": "FRA",
+    "away": "MAR",
+    "date": "July 9",
+    "venue": "Foxborough",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m89",
+     "m90"
+    ],
+    "prediction": {
+     "expected_goals": [
+      2.09,
+      0.52
+     ],
+     "p_win": 0.7426,
+     "p_draw": 0.1779,
+     "p_loss": 0.0795,
+     "most_likely_score": [
+      2,
+      0
+     ],
+     "most_likely_score_p": 0.1608,
+     "score_matrix": [
+      [
+       0.07364,
+       0.0382,
+       0.00991,
+       0.00171,
+       0.00022,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.15389,
+       0.07983,
+       0.0207,
+       0.00358,
+       0.00046,
+       5e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.16081,
+       0.08341,
+       0.02163,
+       0.00374,
+       0.00049,
+       5e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.11203,
+       0.05811,
+       0.01507,
+       0.00261,
+       0.00034,
+       4e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.05853,
+       0.03036,
+       0.00787,
+       0.00136,
+       0.00018,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.02446,
+       0.01269,
+       0.00329,
+       0.00057,
+       7e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00852,
+       0.00442,
+       0.00115,
+       0.0002,
+       3e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00254,
+       0.00132,
+       0.00034,
+       6e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00086,
+       0.00045,
+       0.00012,
+       2e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.8555
+    },
+    "predicted_winner": "FRA",
+    "predicted_score": [
+     2,
+     0
+    ],
+    "reasoning": {
+     "text": "综合实力分法国高出摩洛哥 285分（明显占优）。实力差主要来自Elo基础分（2134 vs 1886）与本届状态（净胜球+11 vs +3）。泊松模型给出最可能比分2比0，法国晋级概率约86%。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m98",
+    "slot": 2,
+    "home": "ESP",
+    "away": "BEL",
+    "date": "July 10",
+    "venue": "Inglewood",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m93",
+     "m94"
+    ],
+    "prediction": {
+     "expected_goals": [
+      2.15,
+      0.44
+     ],
+     "p_win": 0.7717,
+     "p_draw": 0.1651,
+     "p_loss": 0.0632,
+     "most_likely_score": [
+      2,
+      0
+     ],
+     "most_likely_score_p": 0.1729,
+     "score_matrix": [
+      [
+       0.07493,
+       0.03319,
+       0.00735,
+       0.00109,
+       0.00012,
+       1e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.16097,
+       0.0713,
+       0.01579,
+       0.00233,
+       0.00026,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.1729,
+       0.07658,
+       0.01696,
+       0.0025,
+       0.00028,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.12381,
+       0.05484,
+       0.01215,
+       0.00179,
+       0.0002,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.06649,
+       0.02945,
+       0.00652,
+       0.00096,
+       0.00011,
+       1e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.02857,
+       0.01265,
+       0.0028,
+       0.00041,
+       5e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.01023,
+       0.00453,
+       0.001,
+       0.00015,
+       2e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00314,
+       0.00139,
+       0.00031,
+       5e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0011,
+       0.00049,
+       0.00011,
+       2e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.8784
+    },
+    "predicted_winner": "ESP",
+    "predicted_score": [
+     2,
+     0
+    ],
+    "reasoning": {
+     "text": "综合实力分西班牙高出比利时 323分（明显占优）。实力差主要来自Elo基础分（2159 vs 1910）与本届状态（净胜球+8 vs +5）。泊松模型给出最可能比分2比0，西班牙晋级概率约88%。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m99",
+    "slot": 3,
+    "home": "BRA",
+    "away": "ENG",
+    "date": "July 11",
+    "venue": "Miami Gardens",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m91",
+     "m92"
+    ],
+    "prediction": {
+     "expected_goals": [
+      1.25,
+      1.45
+     ],
+     "p_win": 0.3259,
+     "p_draw": 0.257,
+     "p_loss": 0.4171,
+     "most_likely_score": [
+      1,
+      1
+     ],
+     "most_likely_score_p": 0.122,
+     "score_matrix": [
+      [
+       0.06754,
+       0.09771,
+       0.07067,
+       0.03407,
+       0.01232,
+       0.00356,
+       0.00086,
+       0.00018,
+       4e-05
+      ],
+      [
+       0.08432,
+       0.12198,
+       0.08822,
+       0.04254,
+       0.01538,
+       0.00445,
+       0.00107,
+       0.00022,
+       5e-05
+      ],
+      [
+       0.05264,
+       0.07614,
+       0.05507,
+       0.02655,
+       0.0096,
+       0.00278,
+       0.00067,
+       0.00014,
+       3e-05
+      ],
+      [
+       0.0219,
+       0.03169,
+       0.02292,
+       0.01105,
+       0.004,
+       0.00116,
+       0.00028,
+       6e-05,
+       1e-05
+      ],
+      [
+       0.00684,
+       0.00989,
+       0.00715,
+       0.00345,
+       0.00125,
+       0.00036,
+       9e-05,
+       2e-05,
+       0.0
+      ],
+      [
+       0.00171,
+       0.00247,
+       0.00179,
+       0.00086,
+       0.00031,
+       9e-05,
+       2e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.00036,
+       0.00051,
+       0.00037,
+       0.00018,
+       6e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       6e-05,
+       9e-05,
+       7e-05,
+       3e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       1e-05,
+       2e-05,
+       1e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.4499,
+     "decided_in_extra": true
+    },
+    "predicted_winner": "ENG",
+    "predicted_score": [
+     1,
+     1
+    ],
+    "reasoning": {
+     "text": "综合实力分英格兰高出巴西 30分（势均力敌）。实力差主要来自Elo基础分（2031 vs 2046）与本届状态（净胜球+7 vs +5）。泊松模型给出最可能比分1比1，英格兰晋级概率约55%。常规时间大概率难分胜负，预计需要加时或点球分出晋级方。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m100",
+    "slot": 4,
+    "home": "ARG",
+    "away": "COL",
+    "date": "July 11",
+    "venue": "Kansas City",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m95",
+     "m96"
+    ],
+    "prediction": {
+     "expected_goals": [
+      1.91,
+      0.74
+     ],
+     "p_win": 0.6494,
+     "p_draw": 0.2123,
+     "p_loss": 0.1383,
+     "most_likely_score": [
+      1,
+      0
+     ],
+     "most_likely_score_p": 0.1347,
+     "score_matrix": [
+      [
+       0.07065,
+       0.0525,
+       0.01951,
+       0.00483,
+       0.0009,
+       0.00013,
+       2e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.13472,
+       0.10011,
+       0.0372,
+       0.00921,
+       0.00171,
+       0.00025,
+       3e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.12845,
+       0.09545,
+       0.03547,
+       0.00879,
+       0.00163,
+       0.00024,
+       3e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.08165,
+       0.06068,
+       0.02254,
+       0.00558,
+       0.00104,
+       0.00015,
+       2e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.03892,
+       0.02893,
+       0.01075,
+       0.00266,
+       0.00049,
+       7e-05,
+       1e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.01485,
+       0.01103,
+       0.0041,
+       0.00102,
+       0.00019,
+       3e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00472,
+       0.00351,
+       0.0013,
+       0.00032,
+       6e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00129,
+       0.00096,
+       0.00035,
+       9e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00039,
+       0.00029,
+       0.00011,
+       3e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.7769
+    },
+    "predicted_winner": "ARG",
+    "predicted_score": [
+     1,
+     0
+    ],
+    "reasoning": {
+     "text": "综合实力分阿根廷高出哥伦比亚 193分（明显占优）。实力差主要来自Elo基础分（2151 vs 2009）与本届状态（净胜球+8 vs +4）。泊松模型给出最可能比分1比0，阿根廷晋级概率约78%。",
+     "source": "template"
+    }
+   }
+  ],
+  "semi_finals": [
+   {
+    "id": "m101",
+    "slot": 1,
+    "home": "FRA",
+    "away": "ESP",
+    "date": "July 14",
+    "venue": "Arlington",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m97",
+     "m98"
+    ],
+    "prediction": {
+     "expected_goals": [
+      1.31,
+      1.38
+     ],
+     "p_win": 0.3554,
+     "p_draw": 0.2582,
+     "p_loss": 0.3864,
+     "most_likely_score": [
+      1,
+      1
+     ],
+     "most_likely_score_p": 0.1225,
+     "score_matrix": [
+      [
+       0.06747,
+       0.09322,
+       0.0644,
+       0.02966,
+       0.01025,
+       0.00283,
+       0.00065,
+       0.00013,
+       3e-05
+      ],
+      [
+       0.08868,
+       0.12253,
+       0.08465,
+       0.03899,
+       0.01347,
+       0.00372,
+       0.00086,
+       0.00017,
+       3e-05
+      ],
+      [
+       0.05828,
+       0.08053,
+       0.05563,
+       0.02562,
+       0.00885,
+       0.00245,
+       0.00056,
+       0.00011,
+       2e-05
+      ],
+      [
+       0.02554,
+       0.03528,
+       0.02437,
+       0.01123,
+       0.00388,
+       0.00107,
+       0.00025,
+       5e-05,
+       1e-05
+      ],
+      [
+       0.00839,
+       0.01159,
+       0.00801,
+       0.00369,
+       0.00127,
+       0.00035,
+       8e-05,
+       2e-05,
+       0.0
+      ],
+      [
+       0.00221,
+       0.00305,
+       0.00211,
+       0.00097,
+       0.00033,
+       9e-05,
+       2e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.00048,
+       0.00067,
+       0.00046,
+       0.00021,
+       7e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       9e-05,
+       0.00013,
+       9e-05,
+       4e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       2e-05,
+       2e-05,
+       2e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.483,
+     "decided_in_extra": true
+    },
+    "predicted_winner": "ESP",
+    "predicted_score": [
+     1,
+     1
+    ],
+    "reasoning": {
+     "text": "综合实力分西班牙高出法国 10分（势均力敌）。实力差主要来自Elo基础分（2134 vs 2159）与本届状态（净胜球+11 vs +8）。泊松模型给出最可能比分1比1，西班牙晋级概率约52%。常规时间大概率难分胜负，预计需要加时或点球分出晋级方。",
+     "source": "template"
+    }
+   },
+   {
+    "id": "m102",
+    "slot": 2,
+    "home": "ENG",
+    "away": "ARG",
+    "date": "July 15",
+    "venue": "Atlanta",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m99",
+     "m100"
+    ],
+    "prediction": {
+     "expected_goals": [
+      1.03,
+      1.66
+     ],
+     "p_win": 0.2347,
+     "p_draw": 0.2444,
+     "p_loss": 0.5208,
+     "most_likely_score": [
+      1,
+      1
+     ],
+     "most_likely_score_p": 0.1162,
+     "score_matrix": [
+      [
+       0.06835,
+       0.1132,
+       0.09375,
+       0.05176,
+       0.02143,
+       0.0071,
+       0.00196,
+       0.00046,
+       0.00012
+      ],
+      [
+       0.07018,
+       0.11625,
+       0.09627,
+       0.05315,
+       0.02201,
+       0.00729,
+       0.00201,
+       0.00048,
+       0.00012
+      ],
+      [
+       0.03604,
+       0.05968,
+       0.04943,
+       0.02729,
+       0.0113,
+       0.00374,
+       0.00103,
+       0.00024,
+       6e-05
+      ],
+      [
+       0.01233,
+       0.02043,
+       0.01692,
+       0.00934,
+       0.00387,
+       0.00128,
+       0.00035,
+       8e-05,
+       2e-05
+      ],
+      [
+       0.00317,
+       0.00524,
+       0.00434,
+       0.0024,
+       0.00099,
+       0.00033,
+       9e-05,
+       2e-05,
+       1e-05
+      ],
+      [
+       0.00065,
+       0.00108,
+       0.00089,
+       0.00049,
+       0.0002,
+       7e-05,
+       2e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.00011,
+       0.00018,
+       0.00015,
+       8e-05,
+       3e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       2e-05,
+       3e-05,
+       2e-05,
+       1e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.3435,
+     "decided_in_extra": true
+    },
+    "predicted_winner": "ARG",
+    "predicted_score": [
+     1,
+     1
+    ],
+    "reasoning": {
+     "text": "综合实力分阿根廷高出英格兰 98分（略占上风）。实力差主要来自Elo基础分（2046 vs 2151）与本届状态（净胜球+5 vs +8）。泊松模型给出最可能比分1比1，阿根廷晋级概率约66%。常规时间大概率难分胜负，预计需要加时或点球分出晋级方。",
+     "source": "template"
+    }
+   }
+  ],
+  "final": [
+   {
+    "id": "m104",
+    "slot": 1,
+    "home": "ESP",
+    "away": "ARG",
+    "date": "July 19",
+    "venue": "East Rutherford",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m101",
+     "m102"
+    ],
+    "prediction": {
+     "expected_goals": [
+      1.48,
+      1.22
+     ],
+     "p_win": 0.4319,
+     "p_draw": 0.256,
+     "p_loss": 0.3122,
+     "most_likely_score": [
+      1,
+      1
+     ],
+     "most_likely_score_p": 0.1215,
+     "score_matrix": [
+      [
+       0.06761,
+       0.08227,
+       0.05006,
+       0.02031,
+       0.00618,
+       0.0015,
+       0.0003,
+       5e-05,
+       1e-05
+      ],
+      [
+       0.09986,
+       0.12153,
+       0.07394,
+       0.02999,
+       0.00913,
+       0.00222,
+       0.00045,
+       8e-05,
+       1e-05
+      ],
+      [
+       0.07376,
+       0.08975,
+       0.05461,
+       0.02215,
+       0.00674,
+       0.00164,
+       0.00033,
+       6e-05,
+       1e-05
+      ],
+      [
+       0.03631,
+       0.04419,
+       0.02689,
+       0.01091,
+       0.00332,
+       0.00081,
+       0.00016,
+       3e-05,
+       0.0
+      ],
+      [
+       0.01341,
+       0.01632,
+       0.00993,
+       0.00403,
+       0.00123,
+       0.0003,
+       6e-05,
+       1e-05,
+       0.0
+      ],
+      [
+       0.00396,
+       0.00482,
+       0.00293,
+       0.00119,
+       0.00036,
+       9e-05,
+       2e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.00098,
+       0.00119,
+       0.00072,
+       0.00029,
+       9e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00021,
+       0.00025,
+       0.00015,
+       6e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       5e-05,
+       6e-05,
+       3e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.5657,
+     "decided_in_extra": true
+    },
+    "predicted_winner": "ESP",
+    "predicted_score": [
+     1,
+     1
+    ],
+    "reasoning": {
+     "text": "综合实力分西班牙高出阿根廷 40分（势均力敌）。实力差主要来自Elo基础分（2159 vs 2151）与本届状态（净胜球+8 vs +8）。泊松模型给出最可能比分1比1，西班牙晋级概率约57%。常规时间大概率难分胜负，预计需要加时或点球分出晋级方。",
+     "source": "template"
+    }
+   }
+  ],
+  "third_place": [
+   {
+    "id": "m103",
+    "slot": 1,
+    "home": "FRA",
+    "away": "ENG",
+    "date": "July 18",
+    "venue": "Miami Gardens",
+    "status": "scheduled",
+    "score": null,
+    "aet": false,
+    "pens": null,
+    "feeders": [
+     "m101",
+     "m102"
+    ],
+    "losers_of_feeders": true,
+    "prediction": {
+     "expected_goals": [
+      1.74,
+      0.93
+     ],
+     "p_win": 0.5636,
+     "p_draw": 0.2357,
+     "p_loss": 0.2006,
+     "most_likely_score": [
+      1,
+      0
+     ],
+     "most_likely_score_p": 0.12,
+     "score_matrix": [
+      [
+       0.06893,
+       0.06441,
+       0.03009,
+       0.00937,
+       0.00219,
+       0.00041,
+       6e-05,
+       1e-05,
+       0.0
+      ],
+      [
+       0.11996,
+       0.11209,
+       0.05237,
+       0.01631,
+       0.00381,
+       0.00071,
+       0.00011,
+       1e-05,
+       0.0
+      ],
+      [
+       0.10438,
+       0.09753,
+       0.04556,
+       0.01419,
+       0.00331,
+       0.00062,
+       0.0001,
+       1e-05,
+       0.0
+      ],
+      [
+       0.06055,
+       0.05657,
+       0.02643,
+       0.00823,
+       0.00192,
+       0.00036,
+       6e-05,
+       1e-05,
+       0.0
+      ],
+      [
+       0.02634,
+       0.02461,
+       0.0115,
+       0.00358,
+       0.00084,
+       0.00016,
+       2e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.00917,
+       0.00857,
+       0.004,
+       0.00125,
+       0.00029,
+       5e-05,
+       1e-05,
+       0.0,
+       0.0
+      ],
+      [
+       0.00266,
+       0.00248,
+       0.00116,
+       0.00036,
+       8e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00066,
+       0.00062,
+       0.00029,
+       9e-05,
+       2e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.00018,
+       0.00017,
+       8e-05,
+       2e-05,
+       1e-05,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "p_advance": 0.698
+    },
+    "predicted_winner": "FRA",
+    "predicted_score": [
+     1,
+     0
+    ],
+    "reasoning": {
+     "text": "综合实力分法国高出英格兰 127分（略占上风）。实力差主要来自Elo基础分（2134 vs 2046）与本届状态（净胜球+11 vs +5）。泊松模型给出最可能比分1比0，法国晋级概率约70%。",
+     "source": "template"
+    }
+   }
+  ]
+ },
+ "champion": {
+  "team": "ESP",
+  "probability": 0.2563,
+  "report": {
+   "text": "基于10000次蒙特卡洛模拟，当前夺冠格局前三为：法国（31.4%）、西班牙（25.6%）、阿根廷（24.0%）。确定性推演（每轮取最可能结果）显示西班牙将最终夺冠。\n\n西班牙的预测晋级路径：\n32强：已胜奥地利 3比0\n16强：预测胜葡萄牙（最可能比分0比1，晋级概率75%）\n8强：预测胜比利时（最可能比分2比0，晋级概率88%）\n半决赛：预测胜法国（最可能比分1比1，晋级概率52%）\n决赛：预测胜阿根廷（最可能比分1比1，晋级概率57%）\n\n模型可信度：对本届已赛88场比赛的回测方向命中率为67%，其中淘汰赛命中率81%。（提示：配置 DASHSCOPE_API_KEY 可获得 Qwen 生成的深度推理报告）",
+   "source": "template",
+   "facts": "蒙特卡洛10000次模拟夺冠概率Top8：法国 31.4%，西班牙 25.6%，阿根廷 24.0%，英格兰 5.5%，巴西 3.7%，葡萄牙 2.8%，墨西哥 2.4%，哥伦比亚 1.4%\n确定性推演（每场取最可能结果）冠军：西班牙（蒙特卡洛夺冠概率25.6%）\n其晋级路径与各场预测：\n32强：已胜奥地利 3比0\n16强：预测胜葡萄牙（最可能比分0比1，晋级概率75%）\n8强：预测胜比利时（最可能比分2比0，晋级概率88%）\n半决赛：预测胜法国（最可能比分1比1，晋级概率52%）\n决赛：预测胜阿根廷（最可能比分1比1，晋级概率57%）\n模型对已赛88场回测方向命中率67%（淘汰赛81%）"
+  }
+ },
+ "monte_carlo": {
+  "n_sims": 10000,
+  "seed": 2026,
+  "p_champion": {
+   "FRA": 0.3145,
+   "ESP": 0.2563,
+   "ARG": 0.2396,
+   "ENG": 0.0551,
+   "BRA": 0.0373,
+   "POR": 0.0277,
+   "MEX": 0.0239,
+   "COL": 0.0138,
+   "SUI": 0.0097,
+   "NOR": 0.0081,
+   "MAR": 0.008,
+   "BEL": 0.0041,
+   "USA": 0.0011,
+   "PAR": 0.0004,
+   "CAN": 0.0002,
+   "EGY": 0.0002
+  },
+  "p_final": {
+   "ARG": 0.4978,
+   "FRA": 0.4786,
+   "ESP": 0.3833,
+   "ENG": 0.1505,
+   "BRA": 0.1228,
+   "MEX": 0.0838,
+   "POR": 0.0684,
+   "COL": 0.0573,
+   "SUI": 0.0457,
+   "NOR": 0.0396,
+   "MAR": 0.0334,
+   "BEL": 0.0194,
+   "USA": 0.0075,
+   "PAR": 0.0055,
+   "CAN": 0.0039,
+   "EGY": 0.0025
+  },
+  "p_semi": {
+   "FRA": 0.7929,
+   "ARG": 0.7212,
+   "ESP": 0.662,
+   "ENG": 0.3379,
+   "BRA": 0.306,
+   "MEX": 0.2227,
+   "POR": 0.193,
+   "COL": 0.1454,
+   "MAR": 0.1386,
+   "NOR": 0.1334,
+   "SUI": 0.1157,
+   "BEL": 0.0959,
+   "USA": 0.0491,
+   "PAR": 0.0379,
+   "CAN": 0.0306,
+   "EGY": 0.0177
+  }
+ },
+ "model_backtest": {
+  "note": "回测使用赛前实力分（不含本届表现），无数据泄漏",
+  "group": {
+   "matches": 72,
+   "hits": 46,
+   "accuracy": 0.6389
+  },
+  "knockout": {
+   "matches": 16,
+   "hits": 13,
+   "accuracy": 0.8125
+  },
+  "overall": {
+   "matches": 88,
+   "hits": 59,
+   "accuracy": 0.6705
+  }
+ }
+}
