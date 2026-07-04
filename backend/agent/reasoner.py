@@ -75,7 +75,8 @@ def explain_match(match: dict, ratings: dict, teams: dict, client=None) -> dict:
         f"{na}胜率{pred['p_loss']*100:.0f}%\n"
         f"- 最可能比分：{pred['most_likely_score'][0]}比{pred['most_likely_score'][1]}"
         f"；{nh}晋级概率{pred.get('p_advance', pred['p_win'])*100:.0f}%\n"
-        f"请解释为什么模型给出这一预测。"
+        + _context_facts(match, nh, na)
+        + "请解释为什么模型给出这一预测。"
     )
     if client:
         text = _chat(client, MATCH_MODEL, _SYSTEM_MATCH, facts)
@@ -84,22 +85,47 @@ def explain_match(match: dict, ratings: dict, teams: dict, client=None) -> dict:
     return {"text": _template_match(match, rh, ra, nh, na), "source": "template"}
 
 
+def _context_facts(match: dict, nh: str, na: str) -> str:
+    """比赛上下文特征（休息天数/本届点球记录）转为事实行。"""
+    ctx = match.get("context")
+    if not ctx:
+        return ""
+    lines = []
+    rest = ctx.get("rest_days")
+    if rest:
+        lines.append(f"- 休息天数：{nh} {rest['home']}天，{na} {rest['away']}天")
+    pens = ctx.get("pens_this_wc")
+    if pens:
+        for side, name in (("home", nh), ("away", na)):
+            r = pens.get(side)
+            if r:
+                lines.append(f"- {name}本届点球大战{r['won']}胜{r['lost']}负")
+    return "\n".join(lines) + "\n" if lines else ""
+
+
 def _template_match(match: dict, rh: dict, ra: dict, nh: str, na: str) -> str:
     pred = match["prediction"]
     gap = rh["strength"] - ra["strength"]
-    stronger, weaker = (nh, na) if gap >= 0 else (na, nh)
+    if gap >= 0:
+        stronger, weaker, rs, rw = nh, na, rh, ra
+    else:
+        stronger, weaker, rs, rw = na, nh, ra, rh
     s = abs(gap)
     level = "明显占优" if s > 150 else ("略占上风" if s > 50 else "势均力敌")
     win_side_p = max(pred.get("p_advance", pred["p_win"]), 1 - pred.get("p_advance", pred["p_win"]))
     parts = [
         f"综合实力分{stronger}高出{weaker} {s:.0f}分（{level}）。",
-        f"实力差主要来自Elo基础分（{rh['elo']} vs {ra['elo']}）与本届状态"
-        f"（净胜球{rh['wc_gd']:+d} vs {ra['wc_gd']:+d}）。",
+        f"实力差主要来自Elo基础分（{stronger} {rs['elo']} vs {weaker} {rw['elo']}）与本届状态"
+        f"（净胜球{rs['wc_gd']:+d} vs {rw['wc_gd']:+d}）。",
         f"泊松模型给出最可能比分{pred['most_likely_score'][0]}比{pred['most_likely_score'][1]}，"
         f"{stronger}晋级概率约{win_side_p*100:.0f}%。",
     ]
     if pred.get("decided_in_extra"):
         parts.append("常规时间大概率难分胜负，预计需要加时或点球分出晋级方。")
+    rest = (match.get("context") or {}).get("rest_days")
+    if rest and abs(rest["home"] - rest["away"]) >= 2:
+        fresher = nh if rest["home"] > rest["away"] else na
+        parts.append(f"值得注意的是{fresher}多休息{abs(rest['home'] - rest['away'])}天，体能上更占便宜。")
     return "".join(parts)
 
 

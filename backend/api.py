@@ -4,7 +4,10 @@
 """
 from __future__ import annotations
 
+import asyncio
 import logging
+import os
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
@@ -12,12 +15,49 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from agent import pipeline
+from agent import collector, pipeline
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
 
-app = FastAPI(title="世界杯冠军预测 Agent", version="1.0")
+
+def _finished_count(data: dict) -> int:
+    n = sum(1 for m in data["group_matches"] if m.get("score"))
+    for matches in data["bracket"].values():
+        n += sum(1 for m in matches if m.get("status") == "finished")
+    return n
+
+
+async def _auto_refresh_loop(minutes: int) -> None:
+    """主动数据调度：定期在线探测；发现新完赛场次即重跑全流程并热替换缓存。"""
+    global _cache
+    while True:
+        await asyncio.sleep(minutes * 60)
+        try:
+            fresh = await asyncio.to_thread(collector.collect_online)
+            known = _finished_count(collector.load_snapshot())
+            if _finished_count(fresh) > known:
+                log.info("auto-refresh: 检测到新完赛场次，重跑预测流水线")
+                collector.save_snapshot(fresh)
+                _cache = await asyncio.to_thread(pipeline.run)
+            else:
+                log.info("auto-refresh: 无新赛果")
+        except Exception:
+            log.exception("auto-refresh 失败，等待下一轮")
+
+
+@asynccontextmanager
+async def _lifespan(app: FastAPI):
+    minutes = int(os.environ.get("AUTO_REFRESH_MINUTES", "30"))
+    task = asyncio.create_task(_auto_refresh_loop(minutes)) if minutes > 0 else None
+    if task:
+        log.info("auto-refresh 已启动，每 %s 分钟探测一次（AUTO_REFRESH_MINUTES=0 可关闭）", minutes)
+    yield
+    if task:
+        task.cancel()
+
+
+app = FastAPI(title="世界杯冠军预测 Agent", version="1.1", lifespan=_lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 FRONTEND_DIST = Path(__file__).resolve().parent.parent / "frontend" / "dist"

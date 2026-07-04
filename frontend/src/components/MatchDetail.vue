@@ -122,14 +122,29 @@ const factRows = computed(() => {
   const rh = props.ratings[props.match.home]
   const ra = props.ratings[props.match.away]
   if (!rh || !ra) return []
-  return [
+  const rows = [
     { label: '综合实力分', h: rh.strength, a: ra.strength },
     { label: 'Elo 评分', h: rh.elo, a: ra.elo },
     { label: 'FIFA 排名', h: `第${rh.fifa_rank}`, a: `第${ra.fifa_rank}` },
     { label: '近一年 Elo 变化', h: signed(rh.form_1y), a: signed(ra.form_1y) },
     { label: '本届净胜球', h: `${signed(rh.wc_gd)}（${rh.wc_played}场）`, a: `${signed(ra.wc_gd)}（${ra.wc_played}场）` },
   ]
+  const ctx = props.match.context
+  if (ctx?.rest_days) {
+    rows.push({ label: '休息天数', h: ctx.rest_days.home + '天', a: ctx.rest_days.away + '天' })
+  }
+  if (ctx?.pens_this_wc) {
+    rows.push({
+      label: '本届点球大战',
+      h: pensText(ctx.pens_this_wc.home),
+      a: pensText(ctx.pens_this_wc.away),
+    })
+  }
+  return rows
 })
+function pensText(r) {
+  return r ? `${r.won}胜${r.lost}负` : '—'
+}
 function signed(v) {
   return v > 0 ? `+${v}` : `${v}`
 }
