@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-04T13:10:16.938020+00:00",
+ "fetched_at": "2026-07-05T02:20:01.894167+00:00",
  "source": "wikipedia+eloratings",
  "teams": {
   "MEX": {
@@ -47,8 +47,8 @@
    "name_zh": "加拿大",
    "group": "B",
    "fifa_rank": 28,
-   "elo": 1764,
-   "form_1y": 24
+   "elo": 1729,
+   "form_1y": -11
   },
   "BIH": {
    "name_en": "Bosnia and Herzegovina",
@@ -79,8 +79,8 @@
    "name_zh": "摩洛哥",
    "group": "C",
    "fifa_rank": 11,
-   "elo": 1886,
-   "form_1y": 113
+   "elo": 1921,
+   "form_1y": 148
   },
   "SCO": {
    "name_en": "Scotland",
@@ -119,7 +119,7 @@
    "name_zh": "巴拉圭",
    "group": "D",
    "fifa_rank": 39,
-   "elo": 1823,
+   "elo": 1814,
    "form_1y": 150
   },
   "TUR": {
@@ -263,8 +263,8 @@
    "name_zh": "法国",
    "group": "I",
    "fifa_rank": 3,
-   "elo": 2134,
-   "form_1y": 57
+   "elo": 2143,
+   "form_1y": 66
   },
   "NOR": {
    "name_en": "Norway",
@@ -2131,10 +2131,14 @@
     "away": "FRA",
     "date": "July 4",
     "venue": "Philadelphia",
-    "status": "scheduled",
-    "score": null,
+    "status": "finished",
+    "score": [
+     0,
+     1
+    ],
     "aet": false,
     "pens": null,
+    "winner": "FRA",
     "feeders": [
      "m73",
      "m74"
@@ -2147,10 +2151,14 @@
     "away": "MAR",
     "date": "July 4",
     "venue": "Houston",
-    "status": "scheduled",
-    "score": null,
+    "status": "finished",
+    "score": [
+     0,
+     3
+    ],
     "aet": false,
     "pens": null,
+    "winner": "MAR",
     "feeders": [
      "m75",
      "m76"
@@ -2257,8 +2265,8 @@
    {
     "id": "m97",
     "slot": 1,
-    "home": null,
-    "away": null,
+    "home": "FRA",
+    "away": "MAR",
     "date": "July 9",
     "venue": "Foxborough",
     "status": "scheduled",

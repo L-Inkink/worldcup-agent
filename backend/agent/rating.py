@@ -10,13 +10,32 @@ strength = elo
 """
 from __future__ import annotations
 
+import json
+
+from .predictor import PARAMS_FILE
+
 W_FIFA = 0.3
 W_FORM = 0.5
 W_WC = 1.0
 
 
-def compute_ratings(tournament: dict) -> dict[str, dict]:
+def load_weights() -> tuple[float, float, float]:
+    """默认权重 + 校准文件覆盖（calibrate.py 写入 model_params.json 的 rating 段）。"""
+    w = {"w_fifa": W_FIFA, "w_form": W_FORM, "w_wc": W_WC}
+    if PARAMS_FILE.exists():
+        try:
+            w.update(json.loads(PARAMS_FILE.read_text()).get("rating", {}))
+        except (json.JSONDecodeError, OSError):
+            pass
+    return w["w_fifa"], w["w_form"], w["w_wc"]
+
+
+def compute_ratings(tournament: dict, w_fifa: float | None = None,
+                    w_form: float | None = None) -> dict[str, dict]:
     """返回 {code: {elo, fifa_bonus, form_1y, wc_performance, strength, strength_pre}}"""
+    cal_fifa, cal_form, w_wc = load_weights()
+    w_fifa = cal_fifa if w_fifa is None else w_fifa
+    w_form = cal_form if w_form is None else w_form
     per_team_stats = _tournament_stats(tournament)
     ratings: dict[str, dict] = {}
     for code, team in tournament["teams"].items():
@@ -26,7 +45,7 @@ def compute_ratings(tournament: dict) -> dict[str, dict]:
         played, gd = per_team_stats.get(code, (0, 0))
         wc_perf = max(-100.0, min(100.0, (gd / played) * 30)) if played else 0.0
 
-        strength_pre = elo + W_FIFA * fifa_bonus + W_FORM * form
+        strength_pre = elo + w_fifa * fifa_bonus + w_form * form
         ratings[code] = {
             "elo": elo,
             "fifa_rank": team["fifa_rank"],
@@ -36,7 +55,7 @@ def compute_ratings(tournament: dict) -> dict[str, dict]:
             "wc_gd": gd,
             "wc_performance": round(wc_perf, 1),
             "strength_pre": round(strength_pre, 1),
-            "strength": round(strength_pre + W_WC * wc_perf, 1),
+            "strength": round(strength_pre + w_wc * wc_perf, 1),
         }
     return ratings
 

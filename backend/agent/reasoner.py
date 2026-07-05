@@ -11,6 +11,8 @@ from __future__ import annotations
 import logging
 import os
 
+from . import features
+
 log = logging.getLogger(__name__)
 
 DASHSCOPE_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
@@ -100,6 +102,11 @@ def _context_facts(match: dict, nh: str, na: str) -> str:
             r = pens.get(side)
             if r:
                 lines.append(f"- {name}本届点球大战{r['won']}胜{r['lost']}负")
+    players = features.load_key_players()
+    for code, name in ((match["home"], nh), (match["away"], na)):
+        line = features.key_players_line(code, players)
+        if line:
+            lines.append(f"- {name}核心球员：{line}")
     return "\n".join(lines) + "\n" if lines else ""
 
 

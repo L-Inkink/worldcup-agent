@@ -8,10 +8,35 @@
 """
 from __future__ import annotations
 
+import json
 from datetime import date
+from pathlib import Path
 
 ROUND_CHAIN = ["round_of_32", "round_of_16", "quarter_finals", "semi_finals", "final"]
 _MONTHS = {"June": 6, "July": 7}
+
+KEY_PLAYERS_FILE = Path(__file__).resolve().parent.parent / "data" / "key_players.json"
+
+_STATUS_ZH = {"fit": "可出战", "doubt": "出战成疑", "out": "伤停缺阵"}
+
+
+def load_key_players() -> dict[str, list[dict]]:
+    """人工维护的核心球员可用性表（P1，仅供推理解释层）。"""
+    if not KEY_PLAYERS_FILE.exists():
+        return {}
+    try:
+        return json.loads(KEY_PLAYERS_FILE.read_text()).get("teams", {})
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def key_players_line(code: str, players: dict[str, list[dict]]) -> str | None:
+    """'姆巴佩（前锋，可出战）、格列兹曼（前场自由人，可出战）'"""
+    rows = players.get(code)
+    if not rows:
+        return None
+    return "、".join(f"{p['name']}（{p['role']}，{_STATUS_ZH.get(p['status'], p['status'])}）"
+                     for p in rows)
 
 
 def parse_match_date(s: str | None) -> date | None:
