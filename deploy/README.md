@@ -33,5 +33,5 @@ ssh <ecs> "docker run -d --restart unless-stopped -p 80:8000 worldcup-agent"
 ## 说明
 
 - 镜像内置数据快照，**无任何 API key 也能完整运行**（推理用规则模板、数据用快照）
-- `POST /api/refresh` 会在线重新采集 Wikipedia 最新赛果并重跑全流程——淘汰赛期间每天刷一次即可跟上真实赛程
-- 若配置 `DASHSCOPE_API_KEY`，刷新时解说文本由 qwen-plus / qwen-max 生成
+- **自动跟赛程（v1.1）**：服务自带 auto-refresh 后台调度，每 30 分钟探测新完赛场次并自动重跑预测，无需人工干预；`AUTO_REFRESH_MINUTES` 可调（0=关闭），`POST /api/refresh` 可手动立即刷新
+- 若配置 `DASHSCOPE_API_KEY`，解说文本由 qwen-plus / qwen-max 生成
