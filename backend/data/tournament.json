@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-05T02:20:01.894167+00:00",
+ "fetched_at": "2026-07-06T01:09:21.317041+00:00",
  "source": "wikipedia+eloratings",
  "teams": {
   "MEX": {
@@ -48,7 +48,7 @@
    "group": "B",
    "fifa_rank": 28,
    "elo": 1729,
-   "form_1y": -11
+   "form_1y": -17
   },
   "BIH": {
    "name_en": "Bosnia and Herzegovina",
@@ -71,8 +71,8 @@
    "name_zh": "巴西",
    "group": "C",
    "fifa_rank": 5,
-   "elo": 2031,
-   "form_1y": 11
+   "elo": 1993,
+   "form_1y": -27
   },
   "MAR": {
    "name_en": "Morocco",
@@ -136,7 +136,7 @@
    "group": "E",
    "fifa_rank": 9,
    "elo": 1908,
-   "form_1y": -48
+   "form_1y": -25
   },
   "CIV": {
    "name_en": "Ivory Coast",
@@ -232,7 +232,7 @@
    "group": "H",
    "fifa_rank": 1,
    "elo": 2159,
-   "form_1y": 70
+   "form_1y": 47
   },
   "CPV": {
    "name_en": "Cape Verde",
@@ -264,14 +264,14 @@
    "group": "I",
    "fifa_rank": 3,
    "elo": 2143,
-   "form_1y": 66
+   "form_1y": 75
   },
   "NOR": {
    "name_en": "Norway",
    "name_zh": "挪威",
    "group": "I",
    "fifa_rank": 29,
-   "elo": 1934,
+   "elo": 1972,
    "form_1y": 150
   },
   "SEN": {
@@ -336,7 +336,7 @@
    "group": "K",
    "fifa_rank": 6,
    "elo": 2013,
-   "form_1y": 63
+   "form_1y": 54
   },
   "COD": {
    "name_en": "DR Congo",
@@ -2203,10 +2203,14 @@
     "away": "NOR",
     "date": "July 5",
     "venue": "East Rutherford",
-    "status": "scheduled",
-    "score": null,
+    "status": "finished",
+    "score": [
+     1,
+     2
+    ],
     "aet": false,
     "pens": null,
+    "winner": "NOR",
     "feeders": [
      "m81",
      "m82"
@@ -2297,7 +2301,7 @@
    {
     "id": "m99",
     "slot": 3,
-    "home": null,
+    "home": "NOR",
     "away": null,
     "date": "July 11",
     "venue": "Miami Gardens",

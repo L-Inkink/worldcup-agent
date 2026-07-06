@@ -11,6 +11,19 @@
           <span class="p">{{ (row.p * 100).toFixed(1) }}%</span>
         </div>
       </div>
+      <div v-if="modelParams" class="backtest">
+        <div class="section-label">模型档案</div>
+        <div class="bt-row"><span>参数来源</span>
+          <b :class="{ calibrated: modelParams.source === 'calibrated' }">
+            {{ modelParams.source === 'calibrated' ? '回测自动校准' : '经验默认值' }}</b></div>
+        <template v-if="modelParams.source === 'calibrated'">
+          <div class="bt-row"><span>校准样本</span><b>{{ modelParams.matches_used }} 场已赛</b></div>
+          <div class="bt-row"><span>对数损失</span>
+            <b>{{ modelParams.baseline_log_loss }} → {{ modelParams.log_loss }}</b></div>
+          <p class="bt-note">吸收新赛果时自动重校准（改善超阈值才生效）</p>
+        </template>
+      </div>
+
       <div class="backtest">
         <div class="section-label">模型可信度（回测）</div>
         <div class="bt-row"><span>已赛场次方向命中</span>
@@ -47,6 +60,7 @@ const props = defineProps({
   teams: { type: Object, required: true },
   backtest: { type: Object, required: true },
   mc: { type: Object, required: true },
+  modelParams: { type: Object, default: null },
 })
 
 const top3 = computed(() =>
@@ -69,6 +83,7 @@ const top3 = computed(() =>
 .section-label { font-size: 12px; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 8px; }
 .bt-row { display: flex; justify-content: space-between; font-size: 13px; padding: 3px 0; }
 .bt-row b { color: var(--green); }
+.bt-row b.calibrated { color: var(--gold); }
 .bt-note { font-size: 11.5px; color: var(--text-dim); margin-top: 8px; }
 .report h3 { font-size: 15px; margin-bottom: 14px; }
 .text { line-height: 2; font-size: 14px; white-space: pre-wrap; }

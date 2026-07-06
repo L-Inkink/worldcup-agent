@@ -12,7 +12,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import collector, features, rating, reasoner, simulator
+from . import calibrate, collector, features, predictor, rating, reasoner, simulator
 
 log = logging.getLogger(__name__)
 
@@ -23,6 +23,20 @@ OUTPUT_FILE = OUTPUT_DIR / "prediction.json"
 def run(force_refresh: bool = False, use_llm: bool = True) -> dict:
     log.info("step 1/4 数据采集 ...")
     tournament = collector.collect(force_refresh=force_refresh)
+
+    if force_refresh:
+        # 自我进化闭环：吸收新赛果后自动重校准模型参数（改善超阈值才落盘）
+        log.info("step 1b 回测重校准 ...")
+        try:
+            result = calibrate.search(tournament)
+            if calibrate.apply(tournament, result):
+                predictor.PARAMS.update(predictor.load_params())
+                log.info("重校准生效：log loss %s → %s",
+                         result["baseline_log_loss"], result["best_log_loss"])
+            else:
+                log.info("重校准改善不足（%s），维持现有参数", result["gain"])
+        except Exception:
+            log.exception("重校准失败，维持现有参数")
 
     log.info("step 2/4 实力评估 ...")
     ratings = rating.compute_ratings(tournament)
@@ -51,12 +65,31 @@ def run(force_refresh: bool = False, use_llm: bool = True) -> dict:
         },
         "monte_carlo": sim["monte_carlo"],
         "model_backtest": sim["backtest"],
+        "model_params": _model_params_info(),
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(prediction, ensure_ascii=False, indent=1))
     log.info("prediction written to %s", OUTPUT_FILE)
     return prediction
+
+
+def _model_params_info() -> dict:
+    """当前生效的模型参数 + 校准溯源信息（供前端展示）。"""
+    info = {"source": "default", "params": dict(predictor.PARAMS)}
+    if predictor.PARAMS_FILE.exists():
+        try:
+            meta = json.loads(predictor.PARAMS_FILE.read_text())
+            info.update({
+                "source": "calibrated",
+                "calibrated_at": meta.get("calibrated_at"),
+                "matches_used": meta.get("matches_used"),
+                "baseline_log_loss": meta.get("baseline_log_loss"),
+                "log_loss": meta.get("log_loss"),
+            })
+        except (json.JSONDecodeError, OSError):
+            pass
+    return info
 
 
 def load() -> dict | None:

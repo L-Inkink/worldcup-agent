@@ -172,7 +172,7 @@ def _backtest(tournament: dict, ratings: dict[str, dict]) -> dict:
     total = group_total + ko_total
     hits = group_hits + ko_hits
     return {
-        "note": "回测使用赛前实力分（不含本届表现），无数据泄漏",
+        "note": "回测使用赛前实力分（不含本届表现，无结果泄漏）；模型参数经同源已赛样本校准，故此为样本内指标，真实前瞻能力以未赛场次的持续命中为准",
         "group": {"matches": group_total, "hits": group_hits,
                   "accuracy": round(group_hits / group_total, 4) if group_total else None},
         "knockout": {"matches": ko_total, "hits": ko_hits,

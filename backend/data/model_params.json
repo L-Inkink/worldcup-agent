@@ -1,8 +1,8 @@
 {
- "calibrated_at": "2026-07-05T02:17:07.565876+00:00",
- "matches_used": 88,
- "baseline_log_loss": 0.6806,
- "log_loss": 0.6307,
+ "calibrated_at": "2026-07-06T01:09:21.683751+00:00",
+ "matches_used": 91,
+ "baseline_log_loss": 0.665,
+ "log_loss": 0.6137,
  "predictor": {
   "goal_exp": 1.0,
   "rho": -0.12,

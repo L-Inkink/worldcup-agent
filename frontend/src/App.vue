@@ -28,7 +28,8 @@
     <ChampionOdds v-if="tab === 'odds'" :mc="data.monte_carlo" :teams="data.teams"
                   :champion="data.champion.team" />
     <ChampionReport v-if="tab === 'report'" :champion="data.champion" :teams="data.teams"
-                    :backtest="data.model_backtest" :mc="data.monte_carlo" />
+                    :backtest="data.model_backtest" :mc="data.monte_carlo"
+                    :modelParams="data.model_params" />
   </main>
   <main v-else-if="error" class="center-note">
     <p>加载失败：{{ error }}</p>
