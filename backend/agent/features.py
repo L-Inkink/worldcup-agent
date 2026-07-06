@@ -52,12 +52,81 @@ def parse_match_date(s: str | None) -> date | None:
         return None
 
 
-def annotate_context(bracket: dict) -> None:
+# ---------------------------------------------------------------- M0：停赛风险与首发稳定性
+
+DEFENSE_POS = {"RB", "CB", "LB", "SW", "RWB", "LWB", "DF"}
+
+
+def team_lineup_history(tournament: dict) -> dict[str, list[list[dict]]]:
+    """每队按时间序的阵容列表（小组赛在前，已完成的淘汰赛在后）。"""
+    details = tournament.get("match_details") or {}
+    hist: dict[str, list[list[dict]]] = {}
+    seq = list(tournament["group_matches"])
+    for rn in ROUND_CHAIN:
+        seq += [m for m in tournament["bracket"][rn] if m.get("status") == "finished"]
+    for m in seq:
+        d = details.get(f"{m['home']}-{m['away']}")
+        if not d:
+            continue
+        for side, code in (("home", m["home"]), ("away", m["away"])):
+            hist.setdefault(code, []).append(d[side])
+    return hist
+
+
+def team_discipline(history: list[list[dict]]) -> dict:
+    """停赛/黄牌预警（近似规则：累计2黄即停赛一场，黄牌四强前不清零）。
+
+    - suspended_next：最近一场领到红牌，或在最近一场达到第2张累计黄牌
+    - at_risk：当前累计1张黄牌的最近一场首发球员（再染黄将停赛）
+    """
+    yellows: dict[str, int] = {}
+    reached_two_last, red_last = set(), set()
+    for i, match_players in enumerate(history):
+        is_last = i == len(history) - 1
+        for p in match_players:
+            before = yellows.get(p["name"], 0)
+            after = before + p["yellows"]
+            yellows[p["name"]] = after
+            if is_last and p["red"]:
+                red_last.add(p["name"])
+            if is_last and before < 2 <= after:
+                reached_two_last.add(p["name"])
+    last_starters = {p["name"] for p in history[-1] if p["starter"]} if history else set()
+    at_risk = sorted(n for n, c in yellows.items() if c == 1 and n in last_starters)[:5]
+    return {
+        "suspended_next": sorted(reached_two_last | red_last),
+        "at_risk": at_risk,
+    }
+
+
+def lineup_stability(history: list[list[dict]]) -> dict | None:
+    """首发稳定性：上场轮换人数 + 后防组合连续未变场次。"""
+    if len(history) < 2:
+        return None
+    xis = [{p["name"] for p in match if p["starter"]} for match in history]
+    defenses = [{p["name"] for p in match if p["starter"] and p["pos"] in DEFENSE_POS}
+                for match in history]
+    stable = 1
+    for i in range(len(defenses) - 2, -1, -1):
+        if defenses[i] == defenses[-1]:
+            stable += 1
+        else:
+            break
+    return {
+        "xi_changes_last": len(xis[-1] - xis[-2]),
+        "back_line_stable_matches": stable,
+    }
+
+
+def annotate_context(bracket: dict, tournament: dict | None = None) -> None:
     """为已确定双方的未赛场次写入 match['context']。
 
     须在确定性推演之后调用（届时后续轮次的参赛方已由预测填充）。
+    传入 tournament（含 match_details）时额外计算停赛风险与首发稳定性。
     """
     pens_record = _pens_record(bracket)
+    lineup_hist = team_lineup_history(tournament) if tournament else {}
+    discipline_done: set[str] = set()  # 停赛只影响下一场，仅注入每队最近的未赛场次
     last_played: dict[str, date] = {}
 
     for round_name in ROUND_CHAIN:
@@ -76,6 +145,23 @@ def annotate_context(bracket: dict) -> None:
                         if pens_record.get(c)}
                 if pens:
                     ctx["pens_this_wc"] = pens
+                discipline, lineup = {}, {}
+                for side, code in (("home", home), ("away", away)):
+                    h = lineup_hist.get(code)
+                    if not h:
+                        continue
+                    if code not in discipline_done:
+                        discipline_done.add(code)
+                        disc = team_discipline(h)
+                        if disc["suspended_next"] or disc["at_risk"]:
+                            discipline[side] = disc
+                    stab = lineup_stability(h)
+                    if stab:
+                        lineup[side] = stab
+                if discipline:
+                    ctx["discipline"] = discipline
+                if lineup:
+                    ctx["lineup"] = lineup
                 if ctx:
                     m["context"] = ctx
             if d and home and away:

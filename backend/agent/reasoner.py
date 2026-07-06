@@ -102,6 +102,17 @@ def _context_facts(match: dict, nh: str, na: str) -> str:
             r = pens.get(side)
             if r:
                 lines.append(f"- {name}本届点球大战{r['won']}胜{r['lost']}负")
+    for side, name in (("home", nh), ("away", na)):
+        disc = (ctx.get("discipline") or {}).get(side)
+        if disc:
+            if disc["suspended_next"]:
+                lines.append(f"- {name}停赛缺阵：{'、'.join(disc['suspended_next'])}（累计黄牌/红牌）")
+            if disc["at_risk"]:
+                lines.append(f"- {name}黄牌预警（再染黄即停赛）：{'、'.join(disc['at_risk'])}")
+        stab = (ctx.get("lineup") or {}).get(side)
+        if stab:
+            lines.append(f"- {name}首发稳定性：上场轮换{stab['xi_changes_last']}人，"
+                         f"后防组合已连续{stab['back_line_stable_matches']}场未变")
     players = features.load_key_players()
     for code, name in ((match["home"], nh), (match["away"], na)):
         line = features.key_players_line(code, players)

@@ -140,8 +140,33 @@ const factRows = computed(() => {
       a: pensText(ctx.pens_this_wc.away),
     })
   }
+  if (ctx?.discipline) {
+    rows.push({
+      label: '停赛/黄牌预警',
+      h: discText(ctx.discipline.home),
+      a: discText(ctx.discipline.away),
+    })
+  }
+  if (ctx?.lineup) {
+    rows.push({
+      label: '首发稳定性',
+      h: stabText(ctx.lineup.home),
+      a: stabText(ctx.lineup.away),
+    })
+  }
   return rows
 })
+function discText(d) {
+  if (!d) return '—'
+  const parts = []
+  if (d.suspended_next?.length) parts.push(`停赛：${d.suspended_next.join('、')}`)
+  if (d.at_risk?.length) parts.push(`预警：${d.at_risk.join('、')}`)
+  return parts.join('；') || '—'
+}
+function stabText(s) {
+  if (!s) return '—'
+  return `轮换${s.xi_changes_last}人 / 后防${s.back_line_stable_matches}场未变`
+}
 function pensText(r) {
   return r ? `${r.won}胜${r.lost}负` : '—'
 }

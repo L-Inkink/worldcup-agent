@@ -154,9 +154,10 @@ def fetch_group_standings() -> dict[str, list[dict]]:
     return groups
 
 
-def fetch_group_matches() -> list[dict]:
-    """抓取 12 个小组页面，解析全部 72 场小组赛结果。"""
+def fetch_group_matches() -> tuple[list[dict], dict[str, dict]]:
+    """抓取 12 个小组页面：72 场比赛结果 + 每场阵容详情（M0）。"""
     matches: list[dict] = []
+    details: dict[str, dict] = {}
     for g in GROUP_ORDER:
         wt = _wiki_wikitext(f"2026 FIFA World Cup Group {g}")
         found = _parse_football_boxes(wt)
@@ -165,10 +166,89 @@ def fetch_group_matches() -> list[dict]:
             m["round"] = "group"
             m["group"] = g
         matches.extend(found)
+        details.update(parse_page_match_details(wt))
         time.sleep(1.2)  # 礼貌限速，避免 Wikipedia 429
     if len(matches) < 60:
         raise ValueError(f"expected ~72 group matches, got {len(matches)}")
-    return matches
+    return matches, details
+
+
+def fetch_knockout_details() -> dict[str, dict]:
+    """淘汰赛阵容详情：32强专页 + 淘汰赛主页（16强起的详情在此页）。"""
+    details: dict[str, dict] = {}
+    for page in ("2026 FIFA World Cup round of 32", "2026 FIFA World Cup knockout stage"):
+        try:
+            details.update(parse_page_match_details(_wiki_wikitext(page)))
+        except Exception:
+            log.exception("knockout details fetch failed for %s", page)
+    return details
+
+
+# ---------------------------------------------------------------- 阵容与牌（M0）
+
+_LINEUP_ROW = re.compile(
+    r"^\|(?P<pos>[A-Z]{2,3})\s*\|\|\s*'''(?P<num>\d+)'''\s*\|\|\s*"
+    r"\[\[(?:[^]|]*\|)?(?P<name>[^]|]+)\]\](?P<rest>.*)$")
+
+DEFENSE_POS = {"RB", "CB", "LB", "SW", "RWB", "LWB", "DF"}
+
+
+def _parse_lineup_segment(segment: str) -> dict | None:
+    """解析一场比赛 footballbox 后面的两张首发表。
+
+    返回 {"home": [player...], "away": [player...]}；
+    player = {name, pos, starter, yellows, red}。
+    黄牌 {{yel|min}}，红牌/两黄变一红 {{sent off|n|min}}（n>=1 表示黄牌累积转红）。
+    """
+    teams: list[list[dict]] = [[], []]
+    team_idx, starter = 0, True
+    for raw in segment.split("\n"):
+        line = raw.strip()
+        if "'''Substitutions:'''" in line:
+            starter = False
+            continue
+        if "'''Manager:'''" in line:
+            team_idx += 1
+            starter = True
+            continue
+        if team_idx > 1:
+            break
+        m = _LINEUP_ROW.match(line)
+        if not m:
+            continue
+        rest = m.group("rest")
+        sent_off = re.search(r"\{\{sent off\|(\d+)", rest)
+        teams[team_idx].append({
+            "name": m.group("name").strip(),
+            "pos": m.group("pos"),
+            "starter": starter,
+            "yellows": len(re.findall(r"\{\{yel\|", rest)) + (
+                int(sent_off.group(1)) if sent_off else 0),
+            "red": bool(sent_off),
+        })
+    if len(teams[0]) < 11 or len(teams[1]) < 11:
+        return None
+    return {"home": teams[0], "away": teams[1]}
+
+
+def parse_page_match_details(wt: str) -> dict[str, dict]:
+    """从整页 wikitext 提取每场比赛的阵容详情，键为 'HOME-AWAY'。
+
+    footballbox 给出对阵双方；其后到下一个 footballbox 之间的文本含首发表。
+    """
+    details: dict[str, dict] = {}
+    boxes = list(re.finditer(r"\{\{#invoke:football box\|main(.*?)\n\}\}", wt, re.S))
+    for i, box in enumerate(boxes):
+        b = box.group(1)
+        t1 = re.search(r"\|team1\s*=\s*" + FLAG_RE, b)
+        t2 = re.search(r"\|team2\s*=\s*" + FLAG_RE, b)
+        if not (t1 and t2):
+            continue
+        seg_end = boxes[i + 1].start() if i + 1 < len(boxes) else len(wt)
+        lineups = _parse_lineup_segment(wt[box.end():seg_end])
+        if lineups:
+            details[f"{t1.group(1)}-{t2.group(1)}"] = lineups
+    return details
 
 
 def _parse_football_boxes(wt: str) -> list[dict]:
@@ -340,8 +420,9 @@ def collect(force_refresh: bool = False) -> dict:
 def collect_online() -> dict:
     elo = fetch_elo()
     standings = fetch_group_standings()
-    group_matches = fetch_group_matches()
+    group_matches, match_details = fetch_group_matches()
     bracket = fetch_bracket()
+    match_details.update(fetch_knockout_details())
 
     teams = {}
     for code, meta in TEAMS.items():
@@ -357,6 +438,7 @@ def collect_online() -> dict:
         "groups": standings,
         "group_matches": group_matches,
         "bracket": bracket,
+        "match_details": match_details,
     }
 
 

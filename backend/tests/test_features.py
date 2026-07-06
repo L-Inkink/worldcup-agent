@@ -64,3 +64,66 @@ def test_key_players_loader():
     line = features.key_players_line("ESP", players)
     assert "亚马尔" in line and "可出战" in line
     assert features.key_players_line("XXX", players) is None
+
+
+def test_lineup_parser_from_wikitext():
+    from agent import collector
+    seg = """
+{| style="font-size:90%"
+|-
+|GK ||'''1''' ||[[Keeper One]]
+|-
+|CB ||'''3''' ||[[Back One]] || {{yel|23}}
+|-
+|CB ||'''5''' ||[[Back Two]] || {{sent off|1|88}}
+|-
+|CM ||'''8''' ||[[Mid One]] || || {{suboff|66}}
+|-
+|colspan=3|'''Substitutions:'''
+|-
+|FW ||'''14'''||[[Sub One]] || || {{subon|66}}
+|-
+|colspan=3|'''Manager:'''
+|-
+|colspan=3|[[Coach A]]
+|}
+|valign="top"|
+{| style="font-size:90%"
+|-
+|GK ||'''1''' ||[[Away Keeper]]
+|-
+|colspan=3|'''Manager:'''
+|-
+|colspan=3|[[Coach B]]
+|}
+"""
+    # 放宽 11 人校验做单元测试：直接测行解析
+    rows = [l for l in seg.split("\n") if collector._LINEUP_ROW.match(l.strip())]
+    assert len(rows) == 6
+    parsed = collector._parse_lineup_segment(seg)
+    assert parsed is None  # 不足11人 → 整段拒绝（防脏数据）
+
+
+def test_team_discipline_rules():
+    hist = [
+        [{"name": "A", "pos": "CB", "starter": True, "yellows": 1, "red": False},
+         {"name": "B", "pos": "CM", "starter": True, "yellows": 0, "red": False}],
+        [{"name": "A", "pos": "CB", "starter": True, "yellows": 1, "red": False},
+         {"name": "B", "pos": "CM", "starter": True, "yellows": 1, "red": False},
+         {"name": "C", "pos": "FW", "starter": False, "yellows": 0, "red": True}],
+    ]
+    d = features.team_discipline(hist)
+    assert "A" in d["suspended_next"]      # 第二场攒到第2黄
+    assert "C" in d["suspended_next"]      # 红牌
+    assert d["at_risk"] == ["B"]           # 1黄且上场首发
+
+
+def test_lineup_stability_counts():
+    def team(names, defense=()):
+        return [{"name": n, "pos": "CB" if n in defense else "CM",
+                 "starter": True, "yellows": 0, "red": False} for n in names]
+    hist = [team("ABCDEFGHIJK", "ABC"), team("ABCDEFGHIJK", "ABC"),
+            team("ABCDEFGHIJX", "ABC")]
+    s = features.lineup_stability(hist)
+    assert s["xi_changes_last"] == 1
+    assert s["back_line_stable_matches"] == 3

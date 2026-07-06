@@ -43,7 +43,7 @@ def run(force_refresh: bool = False, use_llm: bool = True) -> dict:
 
     log.info("step 3/4 逐轮推演 + 蒙特卡洛 ...")
     sim = simulator.simulate(tournament, ratings)
-    features.annotate_context(sim["bracket"])
+    features.annotate_context(sim["bracket"], tournament)
 
     log.info("step 4/4 推理解释（%s）...", "Qwen" if use_llm else "模板")
     meta = reasoner.annotate(sim, ratings, tournament["teams"], use_llm=use_llm)
