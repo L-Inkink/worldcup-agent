@@ -127,3 +127,31 @@ def test_lineup_stability_counts():
     s = features.lineup_stability(hist)
     assert s["xi_changes_last"] == 1
     assert s["back_line_stable_matches"] == 3
+
+
+def test_venue_context_altitude_and_host():
+    venues = features.load_venues()
+    info = features.venue_context("Mexico City", "MEX", "ENG", {"MEX": "Guadalajara"}, venues)
+    assert info["altitude_m"] == 2240
+    assert info["host_home"] == "home"
+    assert 400 < info["travel_km"]["home"] < 700  # 瓜达拉哈拉→墨西哥城 ~460km
+
+
+def test_haversine_sanity():
+    # 西雅图→迈阿密 ~4400km
+    d = features.haversine_km(47.60, -122.33, 25.96, -80.24)
+    assert 4000 < d < 5000
+
+
+def test_form_trend_labels():
+    t = {"group_matches": [
+            {"home": "AAA", "away": "BBB", "score": [0, 2], "date": "2026-06-11"},
+            {"home": "AAA", "away": "CCC", "score": [1, 1], "date": "2026-06-15"},
+            {"home": "AAA", "away": "DDD", "score": [3, 0], "date": "2026-06-19"},
+            {"home": "BBB", "away": "CCC", "score": [1, 1], "date": "2026-06-15"},
+            {"home": "BBB", "away": "DDD", "score": [1, 1], "date": "2026-06-19"},
+         ],
+         "bracket": {rn: [] for rn in features.ROUND_CHAIN}}
+    labels = features.form_trend(t)
+    assert labels["AAA"] == "渐入佳境"
+    assert labels["BBB"] == "高开低走"  # 首战大胜后连平

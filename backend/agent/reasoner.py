@@ -96,6 +96,21 @@ def _context_facts(match: dict, nh: str, na: str) -> str:
     rest = ctx.get("rest_days")
     if rest:
         lines.append(f"- 休息天数：{nh} {rest['home']}天，{na} {rest['away']}天")
+    vinfo = ctx.get("venue")
+    if vinfo:
+        if vinfo.get("altitude_m"):
+            lines.append(f"- 场地海拔{vinfo['altitude_m']}米（高原，对不适应海拔的球队是考验）")
+        if vinfo.get("host_home"):
+            host = nh if vinfo["host_home"] == "home" else na
+            lines.append(f"- {host}在本国场地作战，享半主场之利")
+        tk = vinfo.get("travel_km")
+        if tk and max(tk.values()) >= 2000:
+            seg = "，".join(f"{nh if s == 'home' else na}{v}公里" for s, v in tk.items())
+            lines.append(f"- 距上一场地旅行距离：{seg}")
+    tr = ctx.get("form_trend")
+    if tr and len(set(tr.values())) > 1:
+        seg = "，".join(f"{nh if s == 'home' else na}{v}" for s, v in tr.items())
+        lines.append(f"- 本届状态趋势：{seg}")
     extra = ctx.get("prev_extra_time")
     if extra:
         who = "、".join(n for s, n in (("home", nh), ("away", na)) if extra.get(s))

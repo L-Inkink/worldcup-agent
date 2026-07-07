@@ -1,0 +1,22 @@
+{
+  "note": "F5 场地静态表：2026世界杯16个主办城市。人工整理，一次成本永久复用。venue 名与 Wikipedia 对阵树的 venue 字段一致。",
+  "venues": {
+    "Foxborough":      {"country": "USA", "lat": 42.09, "lon": -71.26, "altitude_m": 89},
+    "East Rutherford": {"country": "USA", "lat": 40.81, "lon": -74.07, "altitude_m": 3},
+    "Inglewood":       {"country": "USA", "lat": 33.96, "lon": -118.34, "altitude_m": 40},
+    "Santa Clara":     {"country": "USA", "lat": 37.40, "lon": -121.97, "altitude_m": 3},
+    "Seattle":         {"country": "USA", "lat": 47.60, "lon": -122.33, "altitude_m": 4},
+    "Houston":         {"country": "USA", "lat": 29.68, "lon": -95.41, "altitude_m": 15},
+    "Arlington":       {"country": "USA", "lat": 32.75, "lon": -97.08, "altitude_m": 168},
+    "Atlanta":         {"country": "USA", "lat": 33.75, "lon": -84.40, "altitude_m": 320},
+    "Miami Gardens":   {"country": "USA", "lat": 25.96, "lon": -80.24, "altitude_m": 3},
+    "Kansas City":     {"country": "USA", "lat": 39.05, "lon": -94.48, "altitude_m": 265},
+    "Philadelphia":    {"country": "USA", "lat": 39.90, "lon": -75.17, "altitude_m": 12},
+    "Mexico City":     {"country": "MEX", "lat": 19.30, "lon": -99.15, "altitude_m": 2240},
+    "Guadalupe":       {"country": "MEX", "lat": 25.68, "lon": -100.24, "altitude_m": 500},
+    "Guadalajara":     {"country": "MEX", "lat": 20.68, "lon": -103.46, "altitude_m": 1560},
+    "Toronto":         {"country": "CAN", "lat": 43.63, "lon": -79.38, "altitude_m": 76},
+    "Vancouver":       {"country": "CAN", "lat": 49.28, "lon": -123.11, "altitude_m": 5}
+  },
+  "host_teams": {"USA": "USA", "MEX": "MEX", "CAN": "CAN"}
+}

@@ -59,6 +59,84 @@ def parse_match_date(s: str | None) -> date | None:
         return None
 
 
+# ---------------------------------------------------------------- F5：场地特征
+
+VENUES_FILE = Path(__file__).resolve().parent.parent / "data" / "venues.json"
+HIGH_ALTITUDE_M = 1500
+LONG_TRAVEL_KM = 2000
+
+
+def load_venues() -> dict:
+    if not VENUES_FILE.exists():
+        return {}
+    try:
+        return json.loads(VENUES_FILE.read_text()).get("venues", {})
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    import math
+    rlat1, rlat2 = math.radians(lat1), math.radians(lat2)
+    dlat, dlon = rlat2 - rlat1, math.radians(lon2 - lon1)
+    a = math.sin(dlat / 2) ** 2 + math.cos(rlat1) * math.cos(rlat2) * math.sin(dlon / 2) ** 2
+    return 6371 * 2 * math.asin(math.sqrt(a))
+
+
+def venue_context(venue: str, home: str, away: str,
+                  prev_venue: dict[str, str], venues: dict) -> dict | None:
+    """海拔 / 东道主半主场 / 距上一场地的旅行距离。"""
+    v = venues.get(venue)
+    if not v:
+        return None
+    info: dict = {}
+    if v["altitude_m"] >= HIGH_ALTITUDE_M:
+        info["altitude_m"] = v["altitude_m"]
+    hosts = [s for s, c in (("home", home), ("away", away)) if c == v["country"]]
+    if hosts:
+        info["host_home"] = hosts[0]
+    travel = {}
+    for side, code in (("home", home), ("away", away)):
+        pv = venues.get(prev_venue.get(code, ""))
+        if pv:
+            travel[side] = round(haversine_km(pv["lat"], pv["lon"], v["lat"], v["lon"]))
+    if travel:
+        info["travel_km"] = travel
+    return info or None
+
+
+# ---------------------------------------------------------------- F6：本届状态趋势
+
+def form_trend(tournament: dict) -> dict[str, str]:
+    """每队本届逐场净胜球走势 → 定性标签（渐入佳境/高开低走/表现平稳）。"""
+    dated: dict[str, list] = {}
+    seq = list(tournament["group_matches"])
+    for rn in ROUND_CHAIN:
+        seq += [m for m in tournament["bracket"][rn] if m.get("status") == "finished"]
+    for m in seq:
+        if not m.get("score"):
+            continue
+        d = parse_match_date(m.get("date"))
+        gd = m["score"][0] - m["score"][1]
+        for code, g in ((m["home"], gd), (m["away"], -gd)):
+            dated.setdefault(code, []).append((d or date.min, g))
+    labels = {}
+    for code, rows in dated.items():
+        if len(rows) < 3:
+            continue
+        rows.sort(key=lambda r: r[0])
+        gds = [g for _, g in rows]
+        half = len(gds) // 2
+        diff = (sum(gds[half:]) / (len(gds) - half)) - (sum(gds[:half]) / half)
+        if diff >= 0.8:
+            labels[code] = "渐入佳境"
+        elif diff <= -0.8:
+            labels[code] = "高开低走"
+        else:
+            labels[code] = "表现平稳"
+    return labels
+
+
 # ---------------------------------------------------------------- M0：停赛风险与首发稳定性
 
 DEFENSE_POS = {"RB", "CB", "LB", "SW", "RWB", "LWB", "DF"}
@@ -136,6 +214,9 @@ def annotate_context(bracket: dict, tournament: dict | None = None) -> None:
     discipline_done: set[str] = set()  # 停赛只影响下一场，仅注入每队最近的未赛场次
     last_played: dict[str, date] = {}
     last_extra: dict[str, bool] = {}  # F1：上一场是否踢满120分钟（加时/点球）
+    last_venue: dict[str, str] = {}   # F5：上一场场地（旅行距离）
+    venues = load_venues()
+    trends = form_trend(tournament) if tournament else {}
 
     # F2：小组赛日期初始化 last_played——小组末轮相差2-3天，是淘汰赛首轮的真实休息差
     if tournament:
@@ -165,6 +246,14 @@ def annotate_context(bracket: dict, tournament: dict | None = None) -> None:
                          if last_extra.get(c)}
                 if extra:
                     ctx["prev_extra_time"] = extra
+                # F5：场地特征（高海拔/半主场/旅行距离）
+                vinfo = venue_context(m.get("venue", ""), home, away, last_venue, venues)
+                if vinfo:
+                    ctx["venue"] = vinfo
+                # F6：本届状态趋势
+                tr = {s: trends[c] for s, c in (("home", home), ("away", away)) if c in trends}
+                if tr:
+                    ctx["form_trend"] = tr
                 pens = {s: pens_record.get(c) for s, c in (("home", home), ("away", away))
                         if pens_record.get(c)}
                 if pens:
@@ -194,6 +283,8 @@ def annotate_context(bracket: dict, tournament: dict | None = None) -> None:
                 for code in (home, away):
                     last_played[code] = d
                     last_extra[code] = went_extra
+                    if m.get("venue"):
+                        last_venue[code] = m["venue"]
 
 
 def _pens_record(bracket: dict) -> dict[str, dict]:

@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-07-07T00:45:09.807670+00:00",
- "data_source": "snapshot",
- "data_fetched_at": "2026-07-07T00:44:31.897668+00:00",
+ "generated_at": "2026-07-07T00:50:19.883594+00:00",
+ "data_source": "wikipedia+eloratings",
+ "data_fetched_at": "2026-07-07T00:50:19.330366+00:00",
  "reasoning_source": "template",
  "teams": {
   "MEX": {
@@ -2933,6 +2933,17 @@
      "prev_extra_time": {
       "away": true
      },
+     "venue": {
+      "host_home": "home",
+      "travel_km": {
+       "home": 1135,
+       "away": 0
+      }
+     },
+     "form_trend": {
+      "home": "高开低走",
+      "away": "渐入佳境"
+     },
      "discipline": {
       "home": {
        "suspended_next": [],
@@ -3149,6 +3160,16 @@
       "home": true,
       "away": true
      },
+     "venue": {
+      "travel_km": {
+       "home": 954,
+       "away": 1184
+      }
+     },
+     "form_trend": {
+      "home": "高开低走",
+      "away": "高开低走"
+     },
      "pens_this_wc": {
       "away": {
        "won": 1,
@@ -3330,6 +3351,16 @@
       "home": 5,
       "away": 4
      },
+     "venue": {
+      "travel_km": {
+       "home": 0,
+       "away": 2530
+      }
+     },
+     "form_trend": {
+      "home": "表现平稳",
+      "away": "高开低走"
+     },
      "discipline": {
       "home": {
        "suspended_next": [],
@@ -3505,6 +3536,16 @@
      "rest_days": {
       "home": 5,
       "away": 5
+     },
+     "venue": {
+      "travel_km": {
+       "home": 409,
+       "away": 2562
+      }
+     },
+     "form_trend": {
+      "home": "表现平稳",
+      "away": "渐入佳境"
      },
      "pens_this_wc": {
       "away": {
@@ -3692,6 +3733,16 @@
      "prev_extra_time": {
       "away": true
      },
+     "venue": {
+      "travel_km": {
+       "home": 1976,
+       "away": 1553
+      }
+     },
+     "form_trend": {
+      "home": "表现平稳",
+      "away": "渐入佳境"
+     },
      "discipline": {
       "home": {
        "suspended_next": [],
@@ -3858,6 +3909,16 @@
      "rest_days": {
       "home": 6,
       "away": 6
+     },
+     "venue": {
+      "travel_km": {
+       "home": 1747,
+       "away": 2075
+      }
+     },
+     "form_trend": {
+      "home": "高开低走",
+      "away": "表现平稳"
      },
      "discipline": {
       "home": {
@@ -4037,6 +4098,16 @@
      "prev_extra_time": {
       "away": true
      },
+     "venue": {
+      "travel_km": {
+       "home": 1077,
+       "away": 2530
+      }
+     },
+     "form_trend": {
+      "home": "高开低走",
+      "away": "表现平稳"
+     },
      "lineup": {
       "home": {
        "xi_changes_last": 9,
@@ -4196,6 +4267,16 @@
      "rest_days": {
       "home": 5,
       "away": 4
+     },
+     "venue": {
+      "travel_km": {
+       "home": 2493,
+       "away": 1976
+      }
+     },
+     "form_trend": {
+      "home": "表现平稳",
+      "away": "表现平稳"
      },
      "lineup": {
       "home": {
@@ -4357,6 +4438,16 @@
      },
      "prev_extra_time": {
       "home": true
+     },
+     "venue": {
+      "travel_km": {
+       "home": 954,
+       "away": 1077
+      }
+     },
+     "form_trend": {
+      "home": "表现平稳",
+      "away": "高开低走"
      },
      "lineup": {
       "home": {
@@ -4521,6 +4612,16 @@
      "prev_extra_time": {
       "home": true,
       "away": true
+     },
+     "venue": {
+      "travel_km": {
+       "home": 2228,
+       "away": 1203
+      }
+     },
+     "form_trend": {
+      "home": "表现平稳",
+      "away": "表现平稳"
      },
      "lineup": {
       "home": {
@@ -4763,7 +4864,7 @@
    "rho": -0.12,
    "pso_edge_decay": 0.4
   },
-  "calibrated_at": "2026-07-07T00:44:44.122890+00:00",
+  "calibrated_at": "2026-07-07T00:50:19.773726+00:00",
   "matches_used": 93,
   "baseline_log_loss": 0.6588,
   "log_loss": 0.6068
