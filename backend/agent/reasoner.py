@@ -96,6 +96,10 @@ def _context_facts(match: dict, nh: str, na: str) -> str:
     rest = ctx.get("rest_days")
     if rest:
         lines.append(f"- 休息天数：{nh} {rest['home']}天，{na} {rest['away']}天")
+    extra = ctx.get("prev_extra_time")
+    if extra:
+        who = "、".join(n for s, n in (("home", nh), ("away", na)) if extra.get(s))
+        lines.append(f"- 加时疲劳：{who}上一场踢满120分钟（加时/点球），体能恢复负荷更大")
     pens = ctx.get("pens_this_wc")
     if pens:
         for side, name in (("home", nh), ("away", na)):

@@ -258,10 +258,13 @@ def _parse_football_boxes(wt: str) -> list[dict]:
         t1 = re.search(r"\|team1\s*=\s*" + FLAG_RE, b)
         t2 = re.search(r"\|team2\s*=\s*" + FLAG_RE, b)
         sc = re.search(r"\{\{score link\|[^|]*\|(\d+)\s*[–\-]\s*(\d+)", b)
+        dt = re.search(r"\{\{Start date\|(\d{4})\|(\d{1,2})\|(\d{1,2})", b)
         if t1 and t2 and sc:
             out.append({
                 "home": t1.group(1), "away": t2.group(1),
                 "score": [int(sc.group(1)), int(sc.group(2))],
+                "date": (f"{dt.group(1)}-{int(dt.group(2)):02d}-{int(dt.group(3)):02d}"
+                         if dt else None),
                 "status": "finished",
             })
     return out

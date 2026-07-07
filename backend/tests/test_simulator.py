@@ -56,6 +56,7 @@ def test_backtest_no_leakage_and_sane(sim_result):
 
 def test_rating_strength_pre_excludes_wc(tournament):
     ratings = rating.compute_ratings(tournament)
+    w_wc = rating.load_weights()["w_wc"]
     for code, r in ratings.items():
-        expected = r["strength_pre"] + rating.W_WC * r["wc_performance"]
+        expected = r["strength_pre"] + w_wc * r["wc_performance"]
         assert math.isclose(r["strength"], expected, abs_tol=0.11)

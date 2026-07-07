@@ -27,5 +27,6 @@ def test_params_file_roundtrip():
     params = predictor.load_params()
     for key in DEFAULT_PARAMS:
         assert key in params
-    w_fifa, w_form, w_wc = rating.load_weights()
-    assert 0 <= w_fifa <= 2 and 0 <= w_form <= 2 and 0 <= w_wc <= 2
+    w = rating.load_weights()
+    assert 0 <= w["w_fifa"] <= 2 and 0 <= w["w_form"] <= 2 and 0 <= w["w_wc"] <= 2
+    assert isinstance(w["adj_gd"], bool)

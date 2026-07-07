@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-06T14:52:24.078364+00:00",
+ "fetched_at": "2026-07-07T00:44:31.897668+00:00",
  "source": "wikipedia+eloratings",
  "teams": {
   "MEX": {
@@ -231,8 +231,8 @@
    "name_zh": "西班牙",
    "group": "H",
    "fifa_rank": 1,
-   "elo": 2159,
-   "form_1y": 47
+   "elo": 2177,
+   "form_1y": 65
   },
   "CPV": {
    "name_en": "Cape Verde",
@@ -335,8 +335,8 @@
    "name_zh": "葡萄牙",
    "group": "K",
    "fifa_rank": 6,
-   "elo": 2013,
-   "form_1y": 54
+   "elo": 1995,
+   "form_1y": 36
   },
   "COD": {
    "name_en": "DR Congo",
@@ -997,6 +997,7 @@
     2,
     0
    ],
+   "date": "2026-06-11",
    "status": "finished",
    "id": "gA1",
    "round": "group",
@@ -1009,6 +1010,7 @@
     2,
     1
    ],
+   "date": "2026-06-11",
    "status": "finished",
    "id": "gA2",
    "round": "group",
@@ -1021,6 +1023,7 @@
     1,
     1
    ],
+   "date": "2026-06-18",
    "status": "finished",
    "id": "gA3",
    "round": "group",
@@ -1033,6 +1036,7 @@
     1,
     0
    ],
+   "date": "2026-06-18",
    "status": "finished",
    "id": "gA4",
    "round": "group",
@@ -1045,6 +1049,7 @@
     0,
     3
    ],
+   "date": "2026-06-24",
    "status": "finished",
    "id": "gA5",
    "round": "group",
@@ -1057,6 +1062,7 @@
     1,
     0
    ],
+   "date": "2026-06-24",
    "status": "finished",
    "id": "gA6",
    "round": "group",
@@ -1069,6 +1075,7 @@
     1,
     1
    ],
+   "date": "2026-06-12",
    "status": "finished",
    "id": "gB1",
    "round": "group",
@@ -1081,6 +1088,7 @@
     1,
     1
    ],
+   "date": "2026-06-13",
    "status": "finished",
    "id": "gB2",
    "round": "group",
@@ -1093,6 +1101,7 @@
     4,
     1
    ],
+   "date": "2026-06-18",
    "status": "finished",
    "id": "gB3",
    "round": "group",
@@ -1105,6 +1114,7 @@
     6,
     0
    ],
+   "date": "2026-06-18",
    "status": "finished",
    "id": "gB4",
    "round": "group",
@@ -1117,6 +1127,7 @@
     2,
     1
    ],
+   "date": "2026-06-24",
    "status": "finished",
    "id": "gB5",
    "round": "group",
@@ -1129,6 +1140,7 @@
     3,
     1
    ],
+   "date": "2026-06-24",
    "status": "finished",
    "id": "gB6",
    "round": "group",
@@ -1141,6 +1153,7 @@
     1,
     1
    ],
+   "date": "2026-06-13",
    "status": "finished",
    "id": "gC1",
    "round": "group",
@@ -1153,6 +1166,7 @@
     0,
     1
    ],
+   "date": "2026-06-13",
    "status": "finished",
    "id": "gC2",
    "round": "group",
@@ -1165,6 +1179,7 @@
     0,
     1
    ],
+   "date": "2026-06-19",
    "status": "finished",
    "id": "gC3",
    "round": "group",
@@ -1177,6 +1192,7 @@
     3,
     0
    ],
+   "date": "2026-06-19",
    "status": "finished",
    "id": "gC4",
    "round": "group",
@@ -1189,6 +1205,7 @@
     0,
     3
    ],
+   "date": "2026-06-24",
    "status": "finished",
    "id": "gC5",
    "round": "group",
@@ -1201,6 +1218,7 @@
     4,
     2
    ],
+   "date": "2026-06-24",
    "status": "finished",
    "id": "gC6",
    "round": "group",
@@ -1213,6 +1231,7 @@
     4,
     1
    ],
+   "date": "2026-06-12",
    "status": "finished",
    "id": "gD1",
    "round": "group",
@@ -1225,6 +1244,7 @@
     2,
     0
    ],
+   "date": "2026-06-13",
    "status": "finished",
    "id": "gD2",
    "round": "group",
@@ -1237,6 +1257,7 @@
     2,
     0
    ],
+   "date": "2026-06-19",
    "status": "finished",
    "id": "gD3",
    "round": "group",
@@ -1249,6 +1270,7 @@
     0,
     1
    ],
+   "date": "2026-06-19",
    "status": "finished",
    "id": "gD4",
    "round": "group",
@@ -1261,6 +1283,7 @@
     3,
     2
    ],
+   "date": "2026-06-25",
    "status": "finished",
    "id": "gD5",
    "round": "group",
@@ -1273,6 +1296,7 @@
     0,
     0
    ],
+   "date": "2026-06-25",
    "status": "finished",
    "id": "gD6",
    "round": "group",
@@ -1285,6 +1309,7 @@
     7,
     1
    ],
+   "date": "2026-06-14",
    "status": "finished",
    "id": "gE1",
    "round": "group",
@@ -1297,6 +1322,7 @@
     1,
     0
    ],
+   "date": "2026-06-14",
    "status": "finished",
    "id": "gE2",
    "round": "group",
@@ -1309,6 +1335,7 @@
     2,
     1
    ],
+   "date": "2026-06-20",
    "status": "finished",
    "id": "gE3",
    "round": "group",
@@ -1321,6 +1348,7 @@
     0,
     0
    ],
+   "date": "2026-06-20",
    "status": "finished",
    "id": "gE4",
    "round": "group",
@@ -1333,6 +1361,7 @@
     0,
     2
    ],
+   "date": "2026-06-25",
    "status": "finished",
    "id": "gE5",
    "round": "group",
@@ -1345,6 +1374,7 @@
     2,
     1
    ],
+   "date": "2026-06-25",
    "status": "finished",
    "id": "gE6",
    "round": "group",
@@ -1357,6 +1387,7 @@
     2,
     2
    ],
+   "date": "2026-06-14",
    "status": "finished",
    "id": "gF1",
    "round": "group",
@@ -1369,6 +1400,7 @@
     5,
     1
    ],
+   "date": "2026-06-14",
    "status": "finished",
    "id": "gF2",
    "round": "group",
@@ -1381,6 +1413,7 @@
     5,
     1
    ],
+   "date": "2026-06-20",
    "status": "finished",
    "id": "gF3",
    "round": "group",
@@ -1393,6 +1426,7 @@
     0,
     4
    ],
+   "date": "2026-06-20",
    "status": "finished",
    "id": "gF4",
    "round": "group",
@@ -1405,6 +1439,7 @@
     1,
     1
    ],
+   "date": "2026-06-25",
    "status": "finished",
    "id": "gF5",
    "round": "group",
@@ -1417,6 +1452,7 @@
     1,
     3
    ],
+   "date": "2026-06-25",
    "status": "finished",
    "id": "gF6",
    "round": "group",
@@ -1429,6 +1465,7 @@
     1,
     1
    ],
+   "date": "2026-06-15",
    "status": "finished",
    "id": "gG1",
    "round": "group",
@@ -1441,6 +1478,7 @@
     2,
     2
    ],
+   "date": "2026-06-15",
    "status": "finished",
    "id": "gG2",
    "round": "group",
@@ -1453,6 +1491,7 @@
     0,
     0
    ],
+   "date": "2026-06-21",
    "status": "finished",
    "id": "gG3",
    "round": "group",
@@ -1465,6 +1504,7 @@
     1,
     3
    ],
+   "date": "2026-06-21",
    "status": "finished",
    "id": "gG4",
    "round": "group",
@@ -1477,6 +1517,7 @@
     1,
     1
    ],
+   "date": "2026-06-26",
    "status": "finished",
    "id": "gG5",
    "round": "group",
@@ -1489,6 +1530,7 @@
     1,
     5
    ],
+   "date": "2026-06-26",
    "status": "finished",
    "id": "gG6",
    "round": "group",
@@ -1501,6 +1543,7 @@
     0,
     0
    ],
+   "date": "2026-06-15",
    "status": "finished",
    "id": "gH1",
    "round": "group",
@@ -1513,6 +1556,7 @@
     1,
     1
    ],
+   "date": "2026-06-15",
    "status": "finished",
    "id": "gH2",
    "round": "group",
@@ -1525,6 +1569,7 @@
     4,
     0
    ],
+   "date": "2026-06-21",
    "status": "finished",
    "id": "gH3",
    "round": "group",
@@ -1537,6 +1582,7 @@
     2,
     2
    ],
+   "date": "2026-06-21",
    "status": "finished",
    "id": "gH4",
    "round": "group",
@@ -1549,6 +1595,7 @@
     0,
     0
    ],
+   "date": "2026-06-26",
    "status": "finished",
    "id": "gH5",
    "round": "group",
@@ -1561,6 +1608,7 @@
     0,
     1
    ],
+   "date": "2026-06-26",
    "status": "finished",
    "id": "gH6",
    "round": "group",
@@ -1573,6 +1621,7 @@
     3,
     1
    ],
+   "date": "2026-06-16",
    "status": "finished",
    "id": "gI1",
    "round": "group",
@@ -1585,6 +1634,7 @@
     1,
     4
    ],
+   "date": "2026-06-16",
    "status": "finished",
    "id": "gI2",
    "round": "group",
@@ -1597,6 +1647,7 @@
     3,
     0
    ],
+   "date": "2026-06-22",
    "status": "finished",
    "id": "gI3",
    "round": "group",
@@ -1609,6 +1660,7 @@
     3,
     2
    ],
+   "date": "2026-06-22",
    "status": "finished",
    "id": "gI4",
    "round": "group",
@@ -1621,6 +1673,7 @@
     1,
     4
    ],
+   "date": "2026-06-26",
    "status": "finished",
    "id": "gI5",
    "round": "group",
@@ -1633,6 +1686,7 @@
     5,
     0
    ],
+   "date": "2026-06-26",
    "status": "finished",
    "id": "gI6",
    "round": "group",
@@ -1645,6 +1699,7 @@
     3,
     0
    ],
+   "date": "2026-06-16",
    "status": "finished",
    "id": "gJ1",
    "round": "group",
@@ -1657,6 +1712,7 @@
     3,
     1
    ],
+   "date": "2026-06-16",
    "status": "finished",
    "id": "gJ2",
    "round": "group",
@@ -1669,6 +1725,7 @@
     2,
     0
    ],
+   "date": "2026-06-22",
    "status": "finished",
    "id": "gJ3",
    "round": "group",
@@ -1681,6 +1738,7 @@
     1,
     2
    ],
+   "date": "2026-06-22",
    "status": "finished",
    "id": "gJ4",
    "round": "group",
@@ -1693,6 +1751,7 @@
     3,
     3
    ],
+   "date": "2026-06-27",
    "status": "finished",
    "id": "gJ5",
    "round": "group",
@@ -1705,6 +1764,7 @@
     1,
     3
    ],
+   "date": "2026-06-27",
    "status": "finished",
    "id": "gJ6",
    "round": "group",
@@ -1717,6 +1777,7 @@
     1,
     1
    ],
+   "date": "2026-06-17",
    "status": "finished",
    "id": "gK1",
    "round": "group",
@@ -1729,6 +1790,7 @@
     1,
     3
    ],
+   "date": "2026-06-17",
    "status": "finished",
    "id": "gK2",
    "round": "group",
@@ -1741,6 +1803,7 @@
     5,
     0
    ],
+   "date": "2026-06-23",
    "status": "finished",
    "id": "gK3",
    "round": "group",
@@ -1753,6 +1816,7 @@
     1,
     0
    ],
+   "date": "2026-06-23",
    "status": "finished",
    "id": "gK4",
    "round": "group",
@@ -1765,6 +1829,7 @@
     0,
     0
    ],
+   "date": "2026-06-27",
    "status": "finished",
    "id": "gK5",
    "round": "group",
@@ -1777,6 +1842,7 @@
     3,
     1
    ],
+   "date": "2026-06-27",
    "status": "finished",
    "id": "gK6",
    "round": "group",
@@ -1789,6 +1855,7 @@
     4,
     2
    ],
+   "date": "2026-06-17",
    "status": "finished",
    "id": "gL1",
    "round": "group",
@@ -1801,6 +1868,7 @@
     1,
     0
    ],
+   "date": "2026-06-17",
    "status": "finished",
    "id": "gL2",
    "round": "group",
@@ -1813,6 +1881,7 @@
     0,
     0
    ],
+   "date": "2026-06-23",
    "status": "finished",
    "id": "gL3",
    "round": "group",
@@ -1825,6 +1894,7 @@
     0,
     1
    ],
+   "date": "2026-06-23",
    "status": "finished",
    "id": "gL4",
    "round": "group",
@@ -1837,6 +1907,7 @@
     0,
     2
    ],
+   "date": "2026-06-27",
    "status": "finished",
    "id": "gL5",
    "round": "group",
@@ -1849,6 +1920,7 @@
     2,
     1
    ],
+   "date": "2026-06-27",
    "status": "finished",
    "id": "gL6",
    "round": "group",
@@ -2171,10 +2243,14 @@
     "away": "ESP",
     "date": "July 6",
     "venue": "Arlington",
-    "status": "scheduled",
-    "score": null,
+    "status": "finished",
+    "score": [
+     0,
+     1
+    ],
     "aet": false,
     "pens": null,
+    "winner": "ESP",
     "feeders": [
      "m77",
      "m78"
@@ -2289,7 +2365,7 @@
    {
     "id": "m98",
     "slot": 2,
-    "home": null,
+    "home": "ESP",
     "away": null,
     "date": "July 10",
     "venue": "Inglewood",
@@ -19597,6 +19673,389 @@
      "pos": "MF",
      "starter": false,
      "yellows": 1,
+     "red": false
+    }
+   ]
+  },
+  "POR-ESP": {
+   "home": [
+    {
+     "name": "Diogo Costa",
+     "pos": "GK",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "João Cancelo",
+     "pos": "RB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Rúben Dias",
+     "pos": "CB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Renato Veiga",
+     "pos": "CB",
+     "starter": true,
+     "yellows": 1,
+     "red": false
+    },
+    {
+     "name": "Nuno Mendes",
+     "pos": "LB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "João Neves",
+     "pos": "CM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Vitinha",
+     "pos": "CM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Pedro Neto",
+     "pos": "RW",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Bruno Fernandes",
+     "pos": "AM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "João Félix",
+     "pos": "LW",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Cristiano Ronaldo",
+     "pos": "CF",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Nélson Semedo",
+     "pos": "DF",
+     "starter": false,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Rafael Leão",
+     "pos": "FW",
+     "starter": false,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Diogo Dalot",
+     "pos": "DF",
+     "starter": false,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Francisco Conceição",
+     "pos": "FW",
+     "starter": false,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Bernardo Silva",
+     "pos": "MF",
+     "starter": false,
+     "yellows": 1,
+     "red": false
+    }
+   ],
+   "away": [
+    {
+     "name": "Unai Simón",
+     "pos": "GK",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Pedro Porro",
+     "pos": "RB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Pau Cubarsí",
+     "pos": "CB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Aymeric Laporte",
+     "pos": "CB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Marc Cucurella",
+     "pos": "LB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Rodri",
+     "pos": "DM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Dani Olmo",
+     "pos": "CM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Pedri",
+     "pos": "CM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Lamine Yamal",
+     "pos": "RF",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Mikel Oyarzabal",
+     "pos": "CF",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Álex Baena",
+     "pos": "LF",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Ferran Torres",
+     "pos": "FW",
+     "starter": false,
+     "yellows": 1,
+     "red": false
+    },
+    {
+     "name": "Mikel Merino",
+     "pos": "MF",
+     "starter": false,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Fabián Ruiz",
+     "pos": "MF",
+     "starter": false,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Borja Iglesias",
+     "pos": "FW",
+     "starter": false,
+     "yellows": 0,
+     "red": false
+    }
+   ]
+  },
+  "USA-BEL": {
+   "home": [
+    {
+     "name": "Matt Freese",
+     "pos": "GK",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Alex Freeman",
+     "pos": "CB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Chris Richards",
+     "pos": "CB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Tim Ream",
+     "pos": "CB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Sergiño Dest",
+     "pos": "RW",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Weston McKennie",
+     "pos": "RM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Tyler Adams",
+     "pos": "CM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Malik Tillman",
+     "pos": "LM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Antonee Robinson",
+     "pos": "LW",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Christian Pulisic",
+     "pos": "CF",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Folarin Balogun",
+     "pos": "CF",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    }
+   ],
+   "away": [
+    {
+     "name": "Thibaut Courtois",
+     "pos": "GK",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Timothy Castagne",
+     "pos": "RB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Nathan Ngoy",
+     "pos": "CB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Brandon Mechele",
+     "pos": "CB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Maxim De Cuyper",
+     "pos": "LB",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Amadou Onana",
+     "pos": "CM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Youri Tielemans",
+     "pos": "CM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Leandro Trossard",
+     "pos": "RW",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Nicolas Raskin",
+     "pos": "AM",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Dodi Lukébakio",
+     "pos": "LW",
+     "starter": true,
+     "yellows": 0,
+     "red": false
+    },
+    {
+     "name": "Charles De Ketelaere",
+     "pos": "CF",
+     "starter": true,
+     "yellows": 0,
      "red": false
     }
    ]

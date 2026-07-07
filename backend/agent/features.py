@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import date
 from pathlib import Path
 
@@ -40,9 +41,15 @@ def key_players_line(code: str, players: dict[str, list[dict]]) -> str | None:
 
 
 def parse_match_date(s: str | None) -> date | None:
-    """'July 4' -> date(2026, 7, 4)"""
+    """支持 'July 4'（对阵树）与 '2026-07-04'（小组赛，F2）两种格式。"""
     if not s:
         return None
+    iso = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", s)
+    if iso:
+        try:
+            return date(int(iso.group(1)), int(iso.group(2)), int(iso.group(3)))
+        except ValueError:
+            return None
     parts = s.split()
     if len(parts) != 2 or parts[0] not in _MONTHS:
         return None
@@ -128,6 +135,18 @@ def annotate_context(bracket: dict, tournament: dict | None = None) -> None:
     lineup_hist = team_lineup_history(tournament) if tournament else {}
     discipline_done: set[str] = set()  # 停赛只影响下一场，仅注入每队最近的未赛场次
     last_played: dict[str, date] = {}
+    last_extra: dict[str, bool] = {}  # F1：上一场是否踢满120分钟（加时/点球）
+
+    # F2：小组赛日期初始化 last_played——小组末轮相差2-3天，是淘汰赛首轮的真实休息差
+    if tournament:
+        for gm in tournament.get("group_matches", []):
+            gd = parse_match_date(gm.get("date"))
+            if not gd:
+                continue
+            for code in (gm["home"], gm["away"]):
+                if gd >= last_played.get(code, date.min):
+                    last_played[code] = gd
+                    last_extra[code] = False
 
     for round_name in ROUND_CHAIN:
         for m in bracket[round_name]:
@@ -141,6 +160,11 @@ def annotate_context(bracket: dict, tournament: dict | None = None) -> None:
                         rest[side] = (d - last_played[code]).days
                 if len(rest) == 2:
                     ctx["rest_days"] = rest
+                # F1：加时疲劳——上一场踢满120分钟的一方恢复负荷更大
+                extra = {s: True for s, c in (("home", home), ("away", away))
+                         if last_extra.get(c)}
+                if extra:
+                    ctx["prev_extra_time"] = extra
                 pens = {s: pens_record.get(c) for s, c in (("home", home), ("away", away))
                         if pens_record.get(c)}
                 if pens:
@@ -165,8 +189,11 @@ def annotate_context(bracket: dict, tournament: dict | None = None) -> None:
                 if ctx:
                     m["context"] = ctx
             if d and home and away:
-                last_played[home] = d
-                last_played[away] = d
+                went_extra = bool(m.get("aet") or m.get("pens")) if m["status"] == "finished" \
+                    else bool((m.get("prediction") or {}).get("decided_in_extra"))
+                for code in (home, away):
+                    last_played[code] = d
+                    last_extra[code] = went_extra
 
 
 def _pens_record(bracket: dict) -> dict[str, dict]:
