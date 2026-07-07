@@ -30,6 +30,7 @@
     <ChampionReport v-if="tab === 'report'" :champion="data.champion" :teams="data.teams"
                     :backtest="data.model_backtest" :mc="data.monte_carlo"
                     :modelParams="data.model_params" />
+    <EvalReview v-if="tab === 'eval'" />
   </main>
   <main v-else-if="error" class="center-note">
     <p>加载失败：{{ error }}</p>
@@ -48,6 +49,7 @@ import GroupTables from './components/GroupTables.vue'
 import ChampionOdds from './components/ChampionOdds.vue'
 import ChampionReport from './components/ChampionReport.vue'
 import MatchDetail from './components/MatchDetail.vue'
+import EvalReview from './components/EvalReview.vue'
 import { flag } from './flags.js'
 
 const tabs = [
@@ -55,6 +57,7 @@ const tabs = [
   { key: 'groups', label: '小组赛回顾' },
   { key: 'odds', label: '夺冠概率' },
   { key: 'report', label: '冠军推理' },
+  { key: 'eval', label: '预测复盘' },
 ]
 const tab = ref('bracket')
 const data = ref(null)

@@ -1,0 +1,197 @@
+{
+ "generated_at": "2026-07-07T13:40:49.376643+00:00",
+ "n_cases": 5,
+ "summary": {
+  "cases": 5,
+  "winner_accuracy": 0.8,
+  "winner_hits": 4,
+  "exact_score_hits": 0,
+  "avg_gd_error": 1.2,
+  "avg_total_goals_error": 1.6,
+  "avg_log_loss": 0.4531,
+  "avg_brier": 0.1488,
+  "goal_bias": {
+   "avg_actual_minus_predicted": 0.8,
+   "verdict": "模型系统性低估进球"
+  }
+ },
+ "calibration": [
+  {
+   "bucket": "50-60%",
+   "n": 1,
+   "avg_predicted_conf": 0.516,
+   "actual_hit_rate": 1.0
+  },
+  {
+   "bucket": "60-70%",
+   "n": 1,
+   "avg_predicted_conf": 0.629,
+   "actual_hit_rate": 0.0
+  },
+  {
+   "bucket": "70-80%",
+   "n": 1,
+   "avg_predicted_conf": 0.733,
+   "actual_hit_rate": 1.0
+  },
+  {
+   "bucket": "80-90%",
+   "n": 1,
+   "avg_predicted_conf": 0.816,
+   "actual_hit_rate": 1.0
+  },
+  {
+   "bucket": "90-101%",
+   "n": 1,
+   "avg_predicted_conf": 0.906,
+   "actual_hit_rate": 1.0
+  }
+ ],
+ "cases": [
+  {
+   "match_id": "m89",
+   "round": "round_of_16",
+   "date": "July 4",
+   "home": "PAR",
+   "away": "FRA",
+   "home_zh": "巴拉圭",
+   "away_zh": "法国",
+   "predicted_score": [
+    0,
+    2
+   ],
+   "actual_score": [
+    0,
+    1
+   ],
+   "predicted_winner": "FRA",
+   "actual_winner": "FRA",
+   "winner_hit": true,
+   "exact_score": false,
+   "gd_error": 1,
+   "total_goals_error": 1,
+   "p_advance_for_winner": 0.9062,
+   "pred_confidence": 0.9062,
+   "log_loss": 0.0985,
+   "brier": 0.0088,
+   "reasoning": "综合实力分法国高出巴拉圭 384分（明显占优）。实力差主要来自Elo基础分（1823 vs 2134）与本届状态（净胜球-2 vs +11）。泊松模型给出最可能比分0比2，法国晋级概率约91%。",
+   "recorded_at": "2026-07-04T13:21:48.913391+00:00"
+  },
+  {
+   "match_id": "m90",
+   "round": "round_of_16",
+   "date": "July 4",
+   "home": "CAN",
+   "away": "MAR",
+   "home_zh": "加拿大",
+   "away_zh": "摩洛哥",
+   "predicted_score": [
+    0,
+    1
+   ],
+   "actual_score": [
+    0,
+    3
+   ],
+   "predicted_winner": "MAR",
+   "actual_winner": "MAR",
+   "winner_hit": true,
+   "exact_score": false,
+   "gd_error": 2,
+   "total_goals_error": 2,
+   "p_advance_for_winner": 0.733,
+   "pred_confidence": 0.733,
+   "log_loss": 0.3106,
+   "brier": 0.0713,
+   "reasoning": "综合实力分摩洛哥高出加拿大 154分（明显占优）。实力差主要来自Elo基础分（1764 vs 1886）与本届状态（净胜球+6 vs +3）。泊松模型给出最可能比分0比1，摩洛哥晋级概率约73%。",
+   "recorded_at": "2026-07-04T13:21:48.913391+00:00"
+  },
+  {
+   "match_id": "m91",
+   "round": "round_of_16",
+   "date": "July 5",
+   "home": "BRA",
+   "away": "NOR",
+   "home_zh": "巴西",
+   "away_zh": "挪威",
+   "predicted_score": [
+    1,
+    1
+   ],
+   "actual_score": [
+    1,
+    2
+   ],
+   "predicted_winner": "BRA",
+   "actual_winner": "NOR",
+   "winner_hit": false,
+   "exact_score": false,
+   "gd_error": 1,
+   "total_goals_error": 1,
+   "p_advance_for_winner": 0.3711,
+   "pred_confidence": 0.6289,
+   "log_loss": 0.9913,
+   "brier": 0.3955,
+   "reasoning": "综合实力分巴西高出挪威 79分（略占上风）。实力差主要来自Elo基础分（2031 vs 1934）与本届状态（净胜球+7 vs +2）。泊松模型给出最可能比分1比1，巴西晋级概率约63%。常规时间大概率难分胜负，预计需要加时或点球分出晋级方。",
+   "recorded_at": "2026-07-04T13:21:48.913391+00:00"
+  },
+  {
+   "match_id": "m92",
+   "round": "round_of_16",
+   "date": "July 5",
+   "home": "MEX",
+   "away": "ENG",
+   "home_zh": "墨西哥",
+   "away_zh": "英格兰",
+   "predicted_score": [
+    1,
+    1
+   ],
+   "actual_score": [
+    2,
+    3
+   ],
+   "predicted_winner": "ENG",
+   "actual_winner": "ENG",
+   "winner_hit": true,
+   "exact_score": false,
+   "gd_error": 1,
+   "total_goals_error": 3,
+   "p_advance_for_winner": 0.5159,
+   "pred_confidence": 0.5159,
+   "log_loss": 0.6618,
+   "brier": 0.2344,
+   "reasoning": "综合实力分英格兰高出墨西哥 6分（势均力敌）。实力差主要来自Elo基础分（英格兰 2046 vs 墨西哥 1943）与本届状态（净胜球+5 vs +8）。泊松模型给出最可能比分1比1，英格兰晋级概率约52%。常规时间大概率难分胜负，预计需要加时或点球分出晋级方。",
+   "recorded_at": "2026-07-06T01:11:04.905636+00:00"
+  },
+  {
+   "match_id": "m93",
+   "round": "round_of_16",
+   "date": "July 6",
+   "home": "POR",
+   "away": "ESP",
+   "home_zh": "葡萄牙",
+   "away_zh": "西班牙",
+   "predicted_score": [
+    0,
+    2
+   ],
+   "actual_score": [
+    0,
+    1
+   ],
+   "predicted_winner": "ESP",
+   "actual_winner": "ESP",
+   "winner_hit": true,
+   "exact_score": false,
+   "gd_error": 1,
+   "total_goals_error": 1,
+   "p_advance_for_winner": 0.8162,
+   "pred_confidence": 0.8162,
+   "log_loss": 0.2031,
+   "brier": 0.0338,
+   "reasoning": "综合实力分西班牙高出葡萄牙 157分（明显占优）。实力差主要来自Elo基础分（西班牙 2159 vs 葡萄牙 2013）与本届状态（净胜球+8 vs +6）。泊松模型给出最可能比分0比2，西班牙晋级概率约82%。",
+   "recorded_at": "2026-07-06T14:52:24.565680+00:00"
+  }
+ ]
+}

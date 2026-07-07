@@ -112,6 +112,16 @@ def match_detail(match_id: str):
     raise HTTPException(404, f"match {match_id} not found")
 
 
+@app.get("/api/eval")
+def eval_report():
+    """预测复盘报告（Eval Agent，docs/07）。若无缓存则即时生成。"""
+    from agent import evaluator
+    report = evaluator.load_report()
+    if report is None:
+        report = evaluator.evaluate(_prediction())
+    return report
+
+
 @app.post("/api/refresh")
 def refresh():
     """重新在线采集数据并重跑全流程（赛事推进后获取最新赛果）。"""

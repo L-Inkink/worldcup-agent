@@ -12,7 +12,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import calibrate, collector, features, predictor, rating, reasoner, simulator
+from . import calibrate, collector, evaluator, features, predictor, rating, reasoner, simulator
 
 log = logging.getLogger(__name__)
 
@@ -71,6 +71,14 @@ def run(force_refresh: bool = False, use_llm: bool = True) -> dict:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(prediction, ensure_ascii=False, indent=1))
     log.info("prediction written to %s", OUTPUT_FILE)
+
+    # Eval Agent（元层）：留档未赛预测 + 复盘已赛场次（docs/07 E1/E2）
+    try:
+        evaluator.record_predictions(prediction)
+        evaluator.evaluate(prediction)
+    except Exception:
+        log.exception("eval 步骤失败，不影响主预测产物")
+
     return prediction
 
 
