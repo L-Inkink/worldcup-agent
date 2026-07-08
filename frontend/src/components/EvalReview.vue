@@ -12,8 +12,38 @@
       <div v-if="s.goal_bias" class="bias" :class="{ warn: s.goal_bias.verdict !== '无明显偏差' }">
         进球偏差诊断：<b>{{ s.goal_bias.verdict }}</b>
         （实际−预测总进球均值 {{ s.goal_bias.avg_actual_minus_predicted > 0 ? '+' : '' }}{{ s.goal_bias.avg_actual_minus_predicted }}）
-        <span class="dim">— Evolution Agent 会据此调整校准搜索空间</span>
+        <span class="dim">— 交由 Evolution Agent 分析（下方进化时间线）</span>
       </div>
+    </div>
+
+    <div v-if="evolution.length" class="card">
+      <h3>进化时间线 <span class="dim">（Evolution Agent：可回放的模型自我改进史）</span></h3>
+      <div class="evo" v-for="(e, i) in evolution" :key="i">
+        <div class="evo-head">
+          <span class="evo-tag" :class="e.recalibration && e.recalibration.applied ? 'applied' : 'noop'">
+            {{ e.trigger === 'goal_bias_proposal' ? '偏差提案' : '标准重校准' }}
+          </span>
+          <span class="dim">{{ fmtTime(e.at) }} · 样本 {{ e.matches_used }} 场</span>
+        </div>
+        <div class="evo-body">
+          <div v-if="e.recalibration">
+            重校准：log loss {{ e.recalibration.log_loss.baseline }} → {{ e.recalibration.log_loss.best }}，
+            <b :class="e.recalibration.applied ? 'ok' : 'dim'">
+              {{ e.recalibration.applied ? '已生效' : '改善不足，未落盘' }}</b>
+            <span v-if="Object.keys(e.params_changed || {}).length" class="dim">
+              （{{ Object.keys(e.params_changed).join('、') }} 变更）</span>
+          </div>
+          <div v-if="e.proposal" class="evo-proposal">
+            <b>提案（交人工决策）：</b>{{ e.proposal.observation }}
+            <div class="proposal-rec">{{ e.proposal.recommendation }}</div>
+            <span v-if="e.proposal.conflict" class="tag-conflict">方向冲突，未自动执行</span>
+          </div>
+          <div v-if="e.champion_delta && e.champion_delta.champion_change" class="dim">
+            冠军预测变化：{{ e.champion_delta.champion_change.from }} → {{ e.champion_delta.champion_change.to }}
+          </div>
+        </div>
+      </div>
+      <p class="dim small">进化日志只追加不可改，保证审计完整性。参数变更一律经校准门禁，偏差提案不自动执行。</p>
     </div>
 
     <div v-if="report.calibration.length" class="card">
@@ -54,7 +84,13 @@
 import { computed, onMounted, ref } from 'vue'
 
 const report = ref(null)
+const evolution = ref([])
 const s = computed(() => report.value?.summary || {})
+
+function fmtTime(iso) {
+  if (!iso) return ''
+  return iso.slice(0, 16).replace('T', ' ')
+}
 
 const ROUND_ZH = {
   round_of_32: '32强', round_of_16: '16强', quarter_finals: '8强',
@@ -80,6 +116,10 @@ onMounted(async () => {
   } catch (e) {
     report.value = { n_cases: 0, summary: {}, calibration: [], cases: [] }
   }
+  try {
+    const r = await fetch('/api/evolution')
+    evolution.value = (await r.json()).log.slice().reverse()
+  } catch (e) { /* 进化日志可选 */ }
 })
 </script>
 
@@ -111,4 +151,16 @@ td { padding: 6px; text-align: center; border-top: 1px solid var(--border); }
 .arrow { color: var(--text-dim); }
 .case-reason { margin-top: 6px; font-size: 12px; color: var(--text-dim); line-height: 1.7; }
 .center { text-align: center; padding: 60px 0; }
+.evo { padding: 12px 0; border-top: 1px solid var(--border); }
+.evo:first-of-type { border-top: none; }
+.evo-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.evo-tag { font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+.evo-tag.applied { background: #14532d; color: var(--green); }
+.evo-tag.noop { background: #1e3a5f; color: var(--blue); }
+.evo-body { font-size: 13px; line-height: 1.8; }
+.evo-body .ok { color: var(--green); }
+.evo-proposal { margin-top: 6px; padding: 8px 12px; background: #0b1320; border-radius: 6px;
+  border-left: 3px solid var(--gold); }
+.proposal-rec { margin-top: 4px; font-size: 12.5px; color: var(--text-dim); line-height: 1.7; }
+.tag-conflict { display: inline-block; margin-top: 4px; font-size: 11px; color: var(--gold); }
 </style>

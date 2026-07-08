@@ -122,6 +122,13 @@ def eval_report():
     return report
 
 
+@app.get("/api/evolution")
+def evolution_log():
+    """进化时间线（Evolution Agent，docs/07 E4）：可回放的模型自我改进史。"""
+    from agent import evolution
+    return {"log": evolution.read_log()}
+
+
 @app.post("/api/refresh")
 def refresh():
     """重新在线采集数据并重跑全流程（赛事推进后获取最新赛果）。"""

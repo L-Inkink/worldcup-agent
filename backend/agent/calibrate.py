@@ -109,18 +109,23 @@ def log_loss(tournament: dict, params: dict, w_form: float, w_fifa: float = rati
     return total / n
 
 
-def search(tournament: dict) -> dict:
-    """网格搜索。返回 {baseline, best, results_top5}。"""
+# 阶段1可进入 predictor 参数的维度（Evolution 可扩展 base_goals）
+PREDICTOR_KEYS = ("goal_exp", "rho", "elo_div", "base_goals")
+
+
+def search(tournament: dict, grid: dict | None = None) -> dict:
+    """网格搜索。grid 缺省用 GRID；Evolution 可注入扩展网格（如加 base_goals）。"""
+    grid = grid or GRID
     baseline_params = dict(DEFAULT_PARAMS)
     baseline = log_loss(tournament, baseline_params, w_form=rating.W_FORM)
 
     results = []
-    keys = list(GRID)
-    for combo in itertools.product(*(GRID[k] for k in keys)):
+    keys = list(grid)
+    for combo in itertools.product(*(grid[k] for k in keys)):
         cfg = dict(zip(keys, combo))
         params = dict(DEFAULT_PARAMS)
-        params.update({k: cfg[k] for k in ("goal_exp", "rho", "elo_div")})
-        ll = log_loss(tournament, params, w_form=cfg["w_form"])
+        params.update({k: cfg[k] for k in PREDICTOR_KEYS if k in cfg})
+        ll = log_loss(tournament, params, w_form=cfg.get("w_form", rating.W_FORM))
         results.append((ll, cfg))
     results.sort(key=lambda r: r[0])
 
@@ -135,7 +140,7 @@ def search(tournament: dict) -> dict:
 
     # 阶段2（F3）：固定阶段1最优参数，walk-forward 搜索本届表现项
     params = dict(DEFAULT_PARAMS)
-    params.update({k: best_cfg[k] for k in ("goal_exp", "rho", "elo_div")})
+    params.update({k: best_cfg[k] for k in PREDICTOR_KEYS if k in best_cfg})
     wf_results = []
     for w_wc in WC_GRID["w_wc"]:
         for adj in WC_GRID["adj_gd"]:
@@ -172,7 +177,7 @@ def apply(tournament: dict, result: dict) -> bool:
         "baseline_log_loss": result["baseline_log_loss"],
         "log_loss": result["best_log_loss"],
         "walk_forward": {k: wf[k] for k in ("baseline", "best_log_loss", "gain", "best")} if wf else None,
-        "predictor": {k: cfg[k] for k in ("goal_exp", "rho", "elo_div")},
+        "predictor": {k: cfg[k] for k in PREDICTOR_KEYS if k in cfg},
         "rating": rating_cfg,
     }
     PARAMS_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=1))

@@ -12,7 +12,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import calibrate, collector, evaluator, features, predictor, rating, reasoner, simulator
+from . import (collector, evaluator, evolution, features, predictor,
+               rating, reasoner, simulator)
 
 log = logging.getLogger(__name__)
 
@@ -24,19 +25,17 @@ def run(force_refresh: bool = False, use_llm: bool = True) -> dict:
     log.info("step 1/4 数据采集 ...")
     tournament = collector.collect(force_refresh=force_refresh)
 
+    evo_action = None
     if force_refresh:
-        # 自我进化闭环：吸收新赛果后自动重校准模型参数（改善超阈值才落盘）
-        log.info("step 1b 回测重校准 ...")
+        # Evolution Agent 编排闭环（docs/07 E4）：读上轮 Eval 诊断 → 依诊断决定进化动作
+        # → 校准（改善超阈值才落盘）→ 记进化日志。预测重跑后 finalize 回填冠军变化。
+        log.info("step 1b Evolution 进化闭环 ...")
         try:
-            result = calibrate.search(tournament)
-            if calibrate.apply(tournament, result):
-                predictor.PARAMS.update(predictor.load_params())
-                log.info("重校准生效：log loss %s → %s",
-                         result["baseline_log_loss"], result["best_log_loss"])
-            else:
-                log.info("重校准改善不足（%s），维持现有参数", result["gain"])
+            prev_prediction = load()
+            prev_eval = evaluator.load_report()
+            evo_action = evolution.evolve(tournament, prev_prediction, prev_eval)
         except Exception:
-            log.exception("重校准失败，维持现有参数")
+            log.exception("进化失败，维持现有参数")
 
     log.info("step 2/4 实力评估 ...")
     ratings = rating.compute_ratings(tournament)
@@ -78,6 +77,13 @@ def run(force_refresh: bool = False, use_llm: bool = True) -> dict:
         evaluator.evaluate(prediction)
     except Exception:
         log.exception("eval 步骤失败，不影响主预测产物")
+
+    # Evolution 收尾：回填本轮进化对冠军概率的影响，补全进化日志
+    if evo_action:
+        try:
+            evolution.finalize(evo_action, prediction)
+        except Exception:
+            log.exception("evolution.finalize 失败，不影响主预测产物")
 
     return prediction
 
